@@ -1,15 +1,15 @@
 import { Metadata } from "next";
 
 import {
-    Breadcrumb,
-    BreadcrumbItem,
-    BreadcrumbLink,
-    BreadcrumbList,
-    BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbSeparator,
+} from "@/shared/ui/breadcrumb";
 
-import ContactForm from "@/components/sections/contact/ContactForm";
-import { webImage, websitePath } from "@/data/Links";
+import { webImage, websitePath } from "@/shared/data/Links";
+import ContactForm from "@/features/contact/components/ContactForm";
 
 // Enhanced metadata for better SEO
 export const metadata: Metadata = {
@@ -52,8 +52,6 @@ export default function ContactPage() {
 
   return (
     <div className="container mx-auto">
-
-
       <div>
         <div className="header max-md:pt-[50px]">
           <h1 className="header-title">Let's Connect!</h1>

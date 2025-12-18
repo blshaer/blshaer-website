@@ -1,39 +1,35 @@
 "use client";
 
-import PostSection from "@/components/sections/blog/PostSection";
-import WorkExperienceSection from "@/components/sections/experience/WorkExperienceSection";
-import HeroSection from "@/components/sections/hero/HeroSection";
-import Projects from "@/components/sections/projects/Projects";
-import RecommendationsSection from "@/components/sections/recommendations/RecommendationsSection";
-import SkillsSection from "@/components/sections/skills/SkillsSection";
-import { Button } from "@/components/ui";
-import ClickSpark from "@/components/ui/ClickSpark";
-import ShinyText from "@/components/ui/ShinyText";
-import { mailto } from "@/data/Links";
-import { ScrollEffect } from "@/lib/animations";
+import PostSection from "@/features/blog/components/PostSection";
+import HeroSection from "@/features/landing/components/HeroSection";
+import RecommendationsSection from "@/features/landing/components/RecommendationsSection";
+import SkillsSection from "@/features/landing/components/SkillsSection";
+import WorkSection from "@/features/landing/components/WorkExperienceSection";
+import Projects from "@/features/projects/components/Projects";
+import { mailto } from "@/shared/data";
+import { ScrollEffect } from "@/shared/lib/animations";
+import { Button } from "@/shared/ui";
+import ClickSpark from "@/shared/ui/ClickSpark";
+import ShinyText from "@/shared/ui/ShinyText";
 import Link from "next/link";
 import { MdEmail } from "react-icons/md";
-
 
 export default function HomePage() {
   return (
     <div className="container mx-auto">
-
       <HeroSection />
-
 
       <div className="py-4 border-t mt-6">
         <SkillsSection />
       </div>
 
       <div id="work" className="py-4 border-t mt-6">
-        <WorkExperienceSection />
+        <WorkSection />
       </div>
 
       <div id="projects" className="py-4 border-t mt-6">
         <Projects />
       </div>
-
 
       <div className="py-4 border-t mt-6">
         <RecommendationsSection />
@@ -63,20 +59,13 @@ export default function HomePage() {
                 I'm open to discussing new projects, creative ideas, or
                 opportunities to be part of your vision.
               </p>
-              <Link
-                href={mailto}
-           
-           
-
->
-
-<Button icon={<MdEmail className="h-4 w-4"/>} className="mx-auto flex-row-reverse">
-                Get in Touch
-
-
-</Button>
-
-             
+              <Link href={mailto}>
+                <Button
+                  icon={<MdEmail className="h-4 w-4" />}
+                  className="mx-auto flex-row-reverse"
+                >
+                  Get in Touch
+                </Button>
               </Link>
             </div>
           </div>

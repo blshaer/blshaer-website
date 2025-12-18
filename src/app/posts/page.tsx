@@ -1,14 +1,14 @@
-import PostsPreview from "@/components/sections/blog/PostsPreview";
 import {
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbList,
   BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
+} from "@/shared/ui/breadcrumb";
 import { Metadata } from "next";
 
-import { webImage, websitePath } from "@/data/Links";
+import { webImage, websitePath } from "@/shared/data/Links";
+import PostsPreview from "@/features/blog/components/PostsPreview";
 
 // Enhanced metadata for better SEO
 export const metadata: Metadata = {
@@ -52,8 +52,6 @@ export default function PostsPage() {
 
   return (
     <>
-
-
       <div className="posts container mx-auto flex min-h-[100vh] w-full flex-col gap-5 max-md:pb-0 max-md:pt-[50px]">
         <div className="header">
           <h1 className="header-title">Latest posts</h1>

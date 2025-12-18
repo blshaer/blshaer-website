@@ -1,13 +1,13 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
-import Footer from "@/components/layout/Footer";
-import Navbar from "@/components/layout/Navbar";
-import BackgroundEffect from "@/components/ui/backgroundEffect";
-import { CustomDialogProvider } from "@/components/ui/custom-dialog";
-import FloatingActionButton from "@/components/ui/FloatingActionButton";
-import { domain, email, webImage, websitePath } from "@/data/Links";
-import { ThemeProvider } from "@/theme/theme-provider";
+import Footer from "@/features/landing/components/Footer";
+import Navbar from "@/features/landing/components/Navbar";
+import { ThemeProvider } from "@/features/theme/utils/theme-provider";
+import { domain, email, webImage, websitePath } from "@/shared/data/Links";
+import BackgroundEffect from "@/shared/ui/backgroundEffect";
+import { CustomDialogProvider } from "@/shared/ui/custom-dialog";
+import FloatingActionButton from "@/shared/ui/FloatingActionButton";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Toaster } from "sonner";
@@ -79,7 +79,7 @@ export const metadata: Metadata = {
     description:
       "Explore the portfolio of Baraa Alshaer, Full Stack Developer. Projects, experience, and contact details.",
     images: webImage,
-    creator: "@balshaer",
+    creator: "@blshaer",
   },
   robots: {
     index: true,
@@ -107,14 +107,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" dir="ltr">
+    <html lang="en" dir="ltr" suppressHydrationWarning>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
+
+
+        <link href="https://api.fontshare.com/v2/css?f[]=excon@100,300,400,500,700,900,1&display=swap" rel="stylesheet">
+
+        </link>
         <meta name="apple-mobile-web-app-title" content="Baraa" />
         <script
           type="application/ld+json"
@@ -126,8 +125,8 @@ export default function RootLayout({
               url: websitePath.main,
               image: webImage,
               sameAs: [
-                "https://github.com/balshaer",
-                "https://www.linkedin.com/in/balshaer/",
+                "https://github.com/blshaer",
+                "https://www.linkedin.com/in/blshaer/",
                 "https://www.youtube.com/@Codewithbaraa",
               ],
               jobTitle: "Full Stack Developer",

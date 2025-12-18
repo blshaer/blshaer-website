@@ -4,7 +4,7 @@ import { MetadataRoute } from "next";
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://alshaer.vercel.app";
+  const baseUrl = "https://blshaer.vercel.app";
 
   // Main pages
   const routes = ["", "/projects", "/posts", "/contact"].map((route) => ({
@@ -22,7 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "weekly" as const,
       priority: route.url === `${baseUrl}` ? 0.9 : 0.7,
-    }))
+    })),
   );
 
   return [...routes, ...localizedRoutes];

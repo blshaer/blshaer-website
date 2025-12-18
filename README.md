@@ -1,110 +1,113 @@
 # Baraa Alshaer - Portfolio
 
-A modern, responsive portfolio website showcasing my work as a Full-Stack Developer. Built with Next.js and optimized for static hosting with no backend dependencies.
+> A modern, high-performance portfolio website built with Next.js, TypeScript, and Tailwind CSS.
 
-## Features
+## 🚀 Quick Start
 
-- **Static Export** - Deployable to any static hosting service
-- **Responsive Design** - Optimized for all devices and screen sizes
-- **Dark/Light Theme** - Smooth theme switching with system preference detection
-- **Contact Form** - Integrated with EmailJS for direct messaging
-- **Performance Optimized** - Fast loading with optimized assets
-- **SEO Ready** - Meta tags and structured data for search engines
-
-## Tech Stack
-
-- **Framework**: Next.js 15 (Static Export)
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **UI Components**: Radix UI + shadcn/ui
-- **Animations**: Framer Motion
-- **Email**: EmailJS
-- **Icons**: Lucide React
-
-## Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/balshaer/alshaer.git
-   cd alshaer
-   ```
-
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
-
-3. **Set up environment variables** (optional for contact form)
-   ```bash
-   cp .env.example .env.local
-   ```
-   Add your EmailJS credentials:
-   ```env
-   NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_service_id
-   NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_template_id
-   NEXT_PUBLIC_EMAILJS_USER_ID=your_user_id
-   ```
-
-4. **Start development server**
-   ```bash
-   npm run dev
-   ```
-
-## Build & Deployment
-
-### Build for Production
 ```bash
-npm run build
+# Clone the repository
+git clone https://github.com/blshaer/alshaer.git
+cd alshaer
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
 ```
-This generates a static build in the `out/` directory.
 
-### Deploy to Static Hosting
+Open [http://localhost:7000](http://localhost:7000) to view it in your browser.
 
-**Netlify**
-1. Connect your GitHub repository
-2. Build command: `npm run build`
-3. Publish directory: `out`
+## ✨ Features
 
-**Vercel**
-1. Import your GitHub repository
-2. Vercel automatically detects Next.js configuration
+- **Static Export** - Deploy anywhere, no server required
+- **Fully Responsive** - Optimized for all devices
+- **Theme Support** - Dark/Light mode with system preference detection
+- **Performance First** - Optimized for speed and SEO
+- **Email Integration** - Contact form powered by EmailJS
 
-**GitHub Pages**
-1. Build the project: `npm run build`
-2. Deploy the `out/` directory to your `gh-pages` branch
+## 🛠️ Tech Stack
 
-## Project Structure
+- [Next.js 15](https://nextjs.org/) - React framework
+- [TypeScript](https://www.typescriptlang.org/) - Type safety
+- [Tailwind CSS](https://tailwindcss.com/) - Styling
+- [Framer Motion](https://www.framer.com/motion/) - Animations
+- [Radix UI](https://www.radix-ui.com/) - UI components
+- [Lucide React](https://lucide.dev/) - Icons
+
+## 📁 Project Structure
 
 ```
 src/
-├── app/                 # Next.js app directory
-├── components/          # Reusable UI components
-├── data/               # Static data files
-│   ├── Profile.ts      # Personal information
-│   ├── Experiences.ts  # Work experience
-│   ├── Education.ts    # Educational background
-│   ├── Projects.ts     # Portfolio projects
-│   └── ...
-├── hooks/              # Custom React hooks
-└── styles/             # Global styles
+├── app/                    # Next.js app directory
+├── features/               # Feature modules
+│   ├── projects/          # Projects section
+│   ├── blog/              # Blog posts
+│   └── contact/           # Contact form
+├── layouts/               # Layout components
+├── shared/
+│   ├── ui/                # Reusable UI components
+│   ├── lib/               # Utility functions
+│   └── data/              # Static content
+└── styles/                # Global styles
 ```
 
-## Customization
+## 🔧 Configuration
 
-Update your portfolio by editing the data files in `src/data/`:
+### Environment Variables
 
-- **Profile.ts** - Personal info, bio, skills
-- **Experiences.ts** - Work experience and achievements
-- **Education.ts** - Educational background
-- **Projects.ts** - Portfolio projects with links and descriptions
+Create a `.env.local` file for the contact form (optional):
 
-## Contact
+```env
+NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_service_id
+NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_template_id
+NEXT_PUBLIC_EMAILJS_USER_ID=your_user_id
+```
 
-- **Email**: alshaer.contact@gmail.com
-- **LinkedIn**: [linkedin.com/in/balshaer](https://linkedin.com/in/balshaer)
-- **GitHub**: [github.com/balshaer](https://github.com/balshaer)
-- **Portfolio**: [alshaer.vercel.app](https://alshaer.vercel.app)
+### Customization
+
+Edit the following files to personalize your portfolio:
+
+- `src/shared/data/Profile.ts` - Personal information
+- `src/shared/data/Experiences.ts` - Work history
+- `src/shared/data/Projects.ts` - Portfolio projects
+
+## 📦 Build & Deploy
+
+### Production Build
+
+```bash
+npm run build
+```
+
+This creates an optimized static export in the `out/` directory.
+
+### Deployment Options
+
+**Vercel** (Recommended)
+```bash
+npm run deploy
+```
+
+**Netlify**
+- Build command: `npm run build`
+- Publish directory: `out`
+
+**GitHub Pages**
+- Push the `out/` directory to your `gh-pages` branch
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 📬 Contact
+
+**Baraa Alshaer**
+- Email: contact.alshaer@gmail.com
+- LinkedIn: [linkedin.com/in/blshaer](https://linkedin.com/in/blshaer)
+- GitHub: [github.com/blshaer](https://github.com/blshaer)
+- Website: [blshaer.vercel.app](https://blshaer.vercel.app)
 
 ---
 
-Built with ❤️ by Baraa Alshaer
+<p align="center">Made with ❤️ by Baraa Alshaer</p>
