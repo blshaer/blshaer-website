@@ -14,7 +14,7 @@ import {
 import { Input } from "@/shared/ui/input";
 import { Textarea } from "@/shared/ui/textarea";
 import { zodResolver } from "@hookform/resolvers/zod";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 import { z } from "zod";

@@ -21,11 +21,10 @@ interface Project {
   logoFileName: string; // New field for local logo file
 }
 
-
 const projectsData: Project[] = [
   {
     id: "proj_1",
-    title: "sam-tax.com",
+    title: "Samtax",
     description: `• Trusted tax and accounting platform for expert tax preparation, financial planning, and business advisory services.\n\n• Secure, scalable web app with multi-language support.\n\n• Integrated payment systems and AI-powered automation for efficiency.`,
     type: "Web Application",
     website: "https://sam-tax.com/",
@@ -140,7 +139,6 @@ const projectsData: Project[] = [
     logoFileName: "talentsift.svg",
   },
 ];
-
 
 function ProjectDescription({ description }: { description: string }) {
   return (
@@ -313,10 +311,11 @@ const Projects = () => {
                     strokeWidth={2}
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className={`lucide ${openProjectId === project.id
-                      ? "lucide-chevrons-down-up"
-                      : "lucide-chevrons-up-down"
-                      } size-4`}
+                    className={`lucide ${
+                      openProjectId === project.id
+                        ? "lucide-chevrons-down-up"
+                        : "lucide-chevrons-up-down"
+                    } size-4`}
                     aria-hidden="true"
                     style={{ stroke: "var(--paragraph)" }}
                   >

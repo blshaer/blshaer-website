@@ -3,11 +3,7 @@
 import { useSocialLinks } from "@/shared/hooks/use-social-links";
 import { memo } from "react";
 
-import {
-  AiFillMail,
-  AiFillTwitterCircle,
-  AiFillYoutube,
-} from "react-icons/ai";
+import { AiFillMail, AiFillTwitterCircle, AiFillYoutube } from "react-icons/ai";
 import { BsLinkedin } from "react-icons/bs";
 import { FaFacebook, FaWhatsapp } from "react-icons/fa";
 import { SiGithub } from "react-icons/si";
@@ -52,7 +48,6 @@ function HeroSocialLinks() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="skill-badge"
-             
                 >
                   {IconComponent && (
                     <IconComponent
@@ -81,10 +76,11 @@ function HeroSection() {
           Full-Stack Developer | AI Integration Specialist
         </h2>
         <p className="text-[var(--paragraph)] mt-4">
-          I build intelligent, scalable software solutions by combining full-stack
-          expertise with smart AI integration. With 5+ years of experience in
-          front-end and back-end development, I create solutions that are robust,
-          user-friendly, and powered by AI to solve real-world problems efficiently.
+          I build intelligent, scalable software solutions by combining
+          full-stack expertise with smart AI integration. With 5+ years of
+          experience in front-end and back-end development, I create solutions
+          that are robust, user-friendly, and powered by AI to solve real-world
+          problems efficiently.
           <br />
           <br />
           Driven by clean code and innovative design, I bring ideas to life with

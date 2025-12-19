@@ -54,7 +54,7 @@ const ReusableCard = React.forwardRef<HTMLDivElement, ReusableCardProps>(
       papers = [], // ✅ روابط الورق
       ...props
     },
-    ref
+    ref,
   ) => {
     return (
       <MagicCard
@@ -63,7 +63,7 @@ const ReusableCard = React.forwardRef<HTMLDivElement, ReusableCardProps>(
         className={cn(
           "group overflow-hidden transition-all duration-300",
           "border-[var(--card-border-color)] bg-[var(--card-background)]",
-          className
+          className,
         )}
         {...props}
       >
@@ -155,7 +155,7 @@ const ReusableCard = React.forwardRef<HTMLDivElement, ReusableCardProps>(
         </CardFooter>
       </MagicCard>
     );
-  }
+  },
 );
 
 ReusableCard.displayName = "ReusableCard";

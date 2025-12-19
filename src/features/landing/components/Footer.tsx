@@ -184,8 +184,6 @@ export default function Footer() {
                   </Button>
                 </div>
               </div>
-
-        
             </motion.div>
           </div>
 

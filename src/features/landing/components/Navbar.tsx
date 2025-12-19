@@ -95,7 +95,6 @@ export default function Navbar() {
                 </div>
               </div>
 
-
               <div className="flex items-center max-md:flex-wrap gap-3 max-md:gap-2 justify-center md:hidden">
                 <ToggleMode />
                 <motion.button

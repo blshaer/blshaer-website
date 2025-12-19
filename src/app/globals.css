@@ -98,8 +98,10 @@
     --Logo-text-color-dark: #fffffe;
     --input-background: #242629;
     --input-background-light: #efeff2;
+    --shiny-text-color: #b5b5b5a4;
     --input-background-dark: #242629;
     --input-border-color: #7575755e;
+    --avatar-background: #72757e;
     --input-border-color-light: #b5b5b55e;
     --input-border-color-dark: #7575755e;
     --badge-background: #7f5af0;
@@ -199,6 +201,8 @@
     --gradient1: #baa3fd;
     --radius: 12px;
     --border-background: #00000008;
+    --shiny-text-color: #16161acc;
+    --avatar-background: #efeff2;
   }
 
   .dark {
@@ -210,8 +214,7 @@
   * {
     @apply m-0 box-border p-0 border-border;
     scroll-behavior: smooth;
-    font-family: 'Excon', sans-serif !important;
-
+    font-family: "Excon", sans-serif !important;
   }
 
   html {
@@ -288,6 +291,7 @@
   .section-subtitle {
     @apply w-full pb-[18px] text-base text-[var(--paragraph)] max-md:max-w-none;
   }
+
   .section-title {
     @apply flex items-center gap-2 pt-2 text-2xl font-bold capitalize text-[var(--headline)];
   }
@@ -418,6 +422,7 @@
     0% {
       background-position: 0% center;
     }
+
     100% {
       background-position: 200% center;
     }
@@ -465,6 +470,7 @@
       opacity: 0;
       transform: translateX(100%);
     }
+
     to {
       opacity: 1;
       transform: translateX(0);
@@ -476,6 +482,7 @@
       opacity: 1;
       transform: translateX(0);
     }
+
     to {
       opacity: 0;
       transform: translateX(100%);
@@ -499,6 +506,7 @@
     50% {
       width: 100%;
     }
+
     100% {
       width: 0;
       right: 0;
@@ -530,7 +538,7 @@
 }
 
 .gradientButton:hover {
-  @apply shadow-[0_1px_20px_rgba(20,136,204,0.5)];
+  box-shadow: 0 1px 20px rgba(20, 136, 204, 0.5);
 }
 
 h1,
@@ -541,7 +549,6 @@ h5,
 h6 {
   @apply text-[var(--headline)];
 }
-
 
 p {
   @apply text-[var(--paragraph)];
@@ -557,7 +564,7 @@ p {
 }
 
 .link {
-  @apply text-[var(--link-color)] hoverd  underline;
+  @apply text-[var(--link-color)] hoverd underline;
 }
 
 .badge-hover:hover > :not(:hover) {
@@ -571,6 +578,7 @@ p {
   height: 8px;
   width: 8px;
 }
+
 *::-webkit-scrollbar-track {
   border-radius: 0px;
   background-color: var(--background);
@@ -730,7 +738,8 @@ button {
 }
 
 .shiny-text {
-  color: #b5b5b5a4; /* Adjust this color to change intensity/style */
+  color: var(--shiny-text-color);
+  /* Adjust this color to change intensity/style */
   background: linear-gradient(
     120deg,
     rgba(255, 255, 255, 0) 40%,
@@ -748,6 +757,7 @@ button {
   0% {
     background-position: 100%;
   }
+
   100% {
     background-position: -100%;
   }
@@ -1125,7 +1135,6 @@ button {
   }
 }
 
-
-.skill-badge{
-  @apply bg-[var(--card-background)] text-[var(--headline)] flex items-center rounded-lg px-3 py-2 font-medium text-xs gap-2 shadow transition focus:outline-none
+.skill-badge {
+  @apply bg-[var(--card-background)] text-[var(--headline)] flex items-center rounded-lg px-3 py-2 font-medium text-xs gap-2 shadow transition focus:outline-none;
 }

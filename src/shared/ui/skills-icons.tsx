@@ -72,7 +72,10 @@ const iconColors: Record<string, string> = {
   FaCode: "#10B981",
 };
 
-const iconComponents: Record<string, React.ComponentType<{ className?: string; style?: React.CSSProperties }>> = {
+const iconComponents: Record<
+  string,
+  React.ComponentType<{ className?: string; style?: React.CSSProperties }>
+> = {
   SiJavascript,
   SiTypescript,
   SiPython,
@@ -107,18 +110,21 @@ const iconComponents: Record<string, React.ComponentType<{ className?: string; s
   FaCode,
 };
 
-export const getSkillIcon = (iconName: string, className: string = "h-4 w-4"): React.ReactNode => {
+export const getSkillIcon = (
+  iconName: string,
+  className: string = "h-4 w-4",
+): React.ReactNode => {
   const IconComponent = iconComponents[iconName];
   if (!IconComponent) return null;
-  
+
   const color = iconColors[iconName] || "#6B7280";
-  
+
   return <IconComponent className={className} style={{ color }} />;
 };
 
 export const getSkillIconMap = (): Record<string, React.ReactNode> => {
   const iconMap: Record<string, React.ReactNode> = {};
-  Object.keys(iconComponents).forEach(iconName => {
+  Object.keys(iconComponents).forEach((iconName) => {
     iconMap[iconName] = getSkillIcon(iconName);
   });
   return iconMap;

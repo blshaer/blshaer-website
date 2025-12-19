@@ -58,7 +58,7 @@ export default function PostsPreview() {
     fetchPosts();
   }, []);
 
-  const reload = () => { };
+  const reload = () => {};
 
   return (
     <motion.div
@@ -71,106 +71,106 @@ export default function PostsPreview() {
       <div className="flex relative w-full min-h-[50vh] flex-col items-center justify-center gap-8 ">
         {loading
           ? Array(3)
-            .fill(null)
-            .map((_, index) => (
-              <motion.div
-                key={index}
-                className="w-full"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <div className="bg-[var(--card-background)] border-[var(--card-border-color)] border rounded-[10px] p-6 space-y-4">
-                  {/* Cover image skeleton */}
-                  <Skeleton className="w-full h-48 rounded-[8px]" />
+              .fill(null)
+              .map((_, index) => (
+                <motion.div
+                  key={index}
+                  className="w-full"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                >
+                  <div className="bg-[var(--card-background)] border-[var(--card-border-color)] border rounded-[10px] p-6 space-y-4">
+                    {/* Cover image skeleton */}
+                    <Skeleton className="w-full h-48 rounded-[8px]" />
 
-                  {/* Title skeleton */}
-                  <div className="space-y-2">
-                    <Skeleton className="h-6 w-3/4" />
-                    <Skeleton className="h-4 w-1/2" />
-                  </div>
+                    {/* Title skeleton */}
+                    <div className="space-y-2">
+                      <Skeleton className="h-6 w-3/4" />
+                      <Skeleton className="h-4 w-1/2" />
+                    </div>
 
-                  {/* Description skeleton */}
-                  <div className="space-y-2">
-                    <Skeleton className="h-4 w-full" />
-                    <Skeleton className="h-4 w-5/6" />
-                    <Skeleton className="h-4 w-2/3" />
-                  </div>
+                    {/* Description skeleton */}
+                    <div className="space-y-2">
+                      <Skeleton className="h-4 w-full" />
+                      <Skeleton className="h-4 w-5/6" />
+                      <Skeleton className="h-4 w-2/3" />
+                    </div>
 
-                  {/* Tags skeleton */}
-                  <div className="flex gap-2">
-                    <Skeleton className="h-6 w-16 rounded-full" />
-                    <Skeleton className="h-6 w-20 rounded-full" />
-                    <Skeleton className="h-6 w-14 rounded-full" />
-                  </div>
+                    {/* Tags skeleton */}
+                    <div className="flex gap-2">
+                      <Skeleton className="h-6 w-16 rounded-full" />
+                      <Skeleton className="h-6 w-20 rounded-full" />
+                      <Skeleton className="h-6 w-14 rounded-full" />
+                    </div>
 
-                  {/* Links skeleton */}
-                  <div className="flex gap-4 pt-2">
-                    <Skeleton className="h-8 w-24" />
-                    <Skeleton className="h-8 w-20" />
+                    {/* Links skeleton */}
+                    <div className="flex gap-4 pt-2">
+                      <Skeleton className="h-8 w-24" />
+                      <Skeleton className="h-8 w-20" />
+                    </div>
                   </div>
-                </div>
-              </motion.div>
-            ))
+                </motion.div>
+              ))
           : // Show posts once data is fetched
-          posts.map((post: any) => (
-            <ReusableCard
-              key={post.id}
-              id={post.id}
-              title={post.title}
-              description={post.description}
-              skills={Array.isArray(post.tags) ? post.tags : []}
-              websiteLink={post.url}
-              githubLink={post.github_url}
-              linkStyle={styles.linkStyle}
-              className="pb-4 pt-2"
-              dir={direction}
-              coverImg={
-                post.cover_image ||
-                "https://images.prismic.io/loco-blogs/79328284-f97b-489f-924c-eb3b17e34b56_image2.png?auto=compress%2Cformat&rect=0%2C0%2C1999%2C1124&w=1920&fit=max"
-              } // Passing image URL as 'img' prop
-            >
-              <div className="flex max-w-[60%] flex-wrap gap-2 max-md:mb-0 max-md:mt-4 max-md:max-w-full">
-                {Array.isArray(post.tags) && post.tags.length > 0 ? (
-                  post.tags.map((tag: string, tagIndex: number) => (
-                    <Badge key={tagIndex}>{tag}</Badge>
-                  ))
-                ) : (
-                  <span>No tags available</span>
-                )}
-              </div>
+            posts.map((post: any) => (
+              <ReusableCard
+                key={post.id}
+                id={post.id}
+                title={post.title}
+                description={post.description}
+                skills={Array.isArray(post.tags) ? post.tags : []}
+                websiteLink={post.url}
+                githubLink={post.github_url}
+                linkStyle={styles.linkStyle}
+                className="pb-4 pt-2"
+                dir={direction}
+                coverImg={
+                  post.cover_image ||
+                  "https://images.prismic.io/loco-blogs/79328284-f97b-489f-924c-eb3b17e34b56_image2.png?auto=compress%2Cformat&rect=0%2C0%2C1999%2C1124&w=1920&fit=max"
+                } // Passing image URL as 'img' prop
+              >
+                <div className="flex max-w-[60%] flex-wrap gap-2 max-md:mb-0 max-md:mt-4 max-md:max-w-full">
+                  {Array.isArray(post.tags) && post.tags.length > 0 ? (
+                    post.tags.map((tag: string, tagIndex: number) => (
+                      <Badge key={tagIndex}>{tag}</Badge>
+                    ))
+                  ) : (
+                    <span>No tags available</span>
+                  )}
+                </div>
 
-              <div className="flex flex-wrap gap-4 max-md:mt-5">
-                {isValidLink(post.url) && (
-                  <Link
-                    href={post.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.linkStyle}
-                  >
-                    <span>
-                      <Globe className="h-4 w-4" />
-                    </span>
-                    <span>Visit Website</span>
-                  </Link>
-                )}
+                <div className="flex flex-wrap gap-4 max-md:mt-5">
+                  {isValidLink(post.url) && (
+                    <Link
+                      href={post.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.linkStyle}
+                    >
+                      <span>
+                        <Globe className="h-4 w-4" />
+                      </span>
+                      <span>Visit Website</span>
+                    </Link>
+                  )}
 
-                {isValidLink(post.github_url) && (
-                  <Link
-                    href={post.github_url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.linkStyle}
-                  >
-                    <span>
-                      <Github className="h-4 w-4" />
-                    </span>
-                    <span>Visit Github</span>
-                  </Link>
-                )}
-              </div>
-            </ReusableCard>
-          ))}
+                  {isValidLink(post.github_url) && (
+                    <Link
+                      href={post.github_url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.linkStyle}
+                    >
+                      <span>
+                        <Github className="h-4 w-4" />
+                      </span>
+                      <span>Visit Github</span>
+                    </Link>
+                  )}
+                </div>
+              </ReusableCard>
+            ))}
 
         {flag && (
           <Card className="flex   h-max absolute inset-0 m-auto text-[var(--paragraph)] w-full  rounded-[10px] p-3 justify-center items-center flex-col gap-3">

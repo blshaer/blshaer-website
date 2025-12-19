@@ -3,10 +3,10 @@
 import { useFeaturedRecommendations } from "@/shared/hooks/use-recommendations";
 import { ScrollEffect } from "@/shared/lib/animations";
 import { cn } from "@/shared/lib/utils";
-import { Skeleton } from "@/shared/ui/skeleton";
-import Link from "next/link";
 import { Avatar, AvatarFallback, AvatarImage } from "@/shared/ui/avatar";
 import { MagicCard } from "@/shared/ui/MagicCard";
+import { Skeleton } from "@/shared/ui/skeleton";
+import Link from "next/link";
 
 import { GoLinkExternal } from "react-icons/go";
 
@@ -105,7 +105,7 @@ const RecommendationsSection = () => {
                 ref={undefined}
               >
                 <div className="flex items-start gap-2">
-                  <Avatar className="bg-[var(--secondary)] border border-[var(--input-border-color)]">
+                  <Avatar className="border border-[var(--input-border-color)]">
                     {avatar ? (
                       <AvatarImage src={avatar} alt={name} />
                     ) : (

@@ -109,11 +109,10 @@ export default function RootLayout({
   return (
     <html lang="en" dir="ltr" suppressHydrationWarning>
       <head>
-
-
-        <link href="https://api.fontshare.com/v2/css?f[]=excon@100,300,400,500,700,900,1&display=swap" rel="stylesheet">
-
-        </link>
+        <link
+          href="https://api.fontshare.com/v2/css?f[]=excon@100,300,400,500,700,900,1&display=swap"
+          rel="stylesheet"
+        ></link>
         <meta name="apple-mobile-web-app-title" content="Baraa" />
         <script
           type="application/ld+json"

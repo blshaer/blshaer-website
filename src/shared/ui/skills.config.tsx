@@ -31,7 +31,11 @@ export const SKILLS_DATA: SkillCategory[] = [
       { name: "Next.js", iconName: "SiNextdotjs", proficiency: "expert" },
       { name: "HTML5", iconName: "FaHtml5", proficiency: "expert" },
       { name: "CSS3", iconName: "FaCss3Alt", proficiency: "expert" },
-      { name: "Tailwind CSS", iconName: "SiTailwindcss", proficiency: "expert" },
+      {
+        name: "Tailwind CSS",
+        iconName: "SiTailwindcss",
+        proficiency: "expert",
+      },
       { name: "SASS", iconName: "SiSass", proficiency: "advanced" },
     ],
   },
@@ -44,7 +48,11 @@ export const SKILLS_DATA: SkillCategory[] = [
       { name: "Express.js", iconName: "SiExpress", proficiency: "expert" },
       { name: "FastAPI", iconName: "SiFastapi", proficiency: "intermediate" },
       { name: "RESTful APIs", iconName: "TbApi", proficiency: "expert" },
-      { name: "JWT & OAuth", iconName: "SiJsonwebtokens", proficiency: "advanced" },
+      {
+        name: "JWT & OAuth",
+        iconName: "SiJsonwebtokens",
+        proficiency: "advanced",
+      },
     ],
   },
   {
@@ -65,8 +73,16 @@ export const SKILLS_DATA: SkillCategory[] = [
     skills: [
       { name: "Git", iconName: "FaGitAlt", proficiency: "expert" },
       { name: "Docker", iconName: "FaDocker", proficiency: "intermediate" },
-      { name: "GitHub Actions", iconName: "SiGithubactions", proficiency: "intermediate" },
-      { name: "Google Cloud Platform", iconName: "SiGooglecloud", proficiency: "intermediate" },
+      {
+        name: "GitHub Actions",
+        iconName: "SiGithubactions",
+        proficiency: "intermediate",
+      },
+      {
+        name: "Google Cloud Platform",
+        iconName: "SiGooglecloud",
+        proficiency: "intermediate",
+      },
       { name: "Firebase", iconName: "SiFirebase", proficiency: "advanced" },
     ],
   },
@@ -76,11 +92,31 @@ export const SKILLS_DATA: SkillCategory[] = [
     order: 6,
     skills: [
       { name: "OpenAI API", iconName: "SiOpenai", proficiency: "advanced" },
-      { name: "Prompt Engineering", iconName: "FaBrain", proficiency: "advanced" },
-      { name: "AI API Integration", iconName: "TbApi", proficiency: "advanced" },
-      { name: "AI Workflows & Automation", iconName: "GiArtificialIntelligence", proficiency: "intermediate" },
-      { name: "Data Processing for AI", iconName: "FaDatabase", proficiency: "intermediate" },
-      { name: "Rate Limiting & Cost Optimization", iconName: "FaChartLine", proficiency: "intermediate" },
+      {
+        name: "Prompt Engineering",
+        iconName: "FaBrain",
+        proficiency: "advanced",
+      },
+      {
+        name: "AI API Integration",
+        iconName: "TbApi",
+        proficiency: "advanced",
+      },
+      {
+        name: "AI Workflows & Automation",
+        iconName: "GiArtificialIntelligence",
+        proficiency: "intermediate",
+      },
+      {
+        name: "Data Processing for AI",
+        iconName: "FaDatabase",
+        proficiency: "intermediate",
+      },
+      {
+        name: "Rate Limiting & Cost Optimization",
+        iconName: "FaChartLine",
+        proficiency: "intermediate",
+      },
     ],
   },
   {
@@ -88,18 +124,21 @@ export const SKILLS_DATA: SkillCategory[] = [
     title: "Software Engineering Concepts",
     order: 7,
     skills: [
-      { name: "System Design", iconName: "FaProjectDiagram", proficiency: "advanced" },
+      {
+        name: "System Design",
+        iconName: "FaProjectDiagram",
+        proficiency: "advanced",
+      },
       { name: "OOP", iconName: "FaCode", proficiency: "expert" },
     ],
   },
 ];
 
-
 // Helper to create icon map for work experience
 export const createSkillIconMap = (): Record<string, string> => {
   const map: Record<string, string> = {};
-  SKILLS_DATA.forEach(category => {
-    category.skills.forEach(skill => {
+  SKILLS_DATA.forEach((category) => {
+    category.skills.forEach((skill) => {
       map[skill.name] = skill.iconName;
     });
   });
@@ -107,7 +146,7 @@ export const createSkillIconMap = (): Record<string, string> => {
 };
 
 export const getAllSkillNames = (): string[] => {
-  return SKILLS_DATA.flatMap(category => 
-    category.skills.map(skill => skill.name)
+  return SKILLS_DATA.flatMap((category) =>
+    category.skills.map((skill) => skill.name),
   );
 };

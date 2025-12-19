@@ -1,43 +1,43 @@
 // Maps work experience skill names to standardized skill names
 export const SKILL_NAME_MAP: Record<string, string> = {
   // Frontend
-  "React": "React.js",
+  React: "React.js",
   "Next.js": "Next.js",
   "Tailwind CSS": "Tailwind CSS",
   "Redux Toolkit": "React.js", // Map to React since we don't have Redux icon
-  "CSS3": "CSS3",
-  "HTML5": "HTML5",
-  
+  CSS3: "CSS3",
+  HTML5: "HTML5",
+
   // Backend
   "Node.js": "Node.js",
   "Express.js": "Express.js",
-  "MongoDB": "MongoDB",
-  "PostgreSQL": "PostgreSQL",
-  "MySQL": "MySQL",
-  "Prisma": "Prisma",
-  
+  MongoDB: "MongoDB",
+  PostgreSQL: "PostgreSQL",
+  MySQL: "MySQL",
+  Prisma: "Prisma",
+
   // Languages
-  "TypeScript": "TypeScript",
-  "JavaScript": "JavaScript",
+  TypeScript: "TypeScript",
+  JavaScript: "JavaScript",
   "JavaScript ES6+": "JavaScript",
-  "Python": "Python",
-  "Java": "Java",
-  
+  Python: "Python",
+  Java: "Java",
+
   // Tools
-  "Git": "Git",
-  "Docker": "Docker",
-  "Webpack": "Webpack",
-  "Firebase": "Firebase",
-  
+  Git: "Git",
+  Docker: "Docker",
+  Webpack: "Webpack",
+  Firebase: "Firebase",
+
   // APIs
   "REST APIs": "RESTful APIs",
   "RESTful APIs": "RESTful APIs",
-  
+
   // Others - map to similar icons
   "AI Integration": "OpenAI API",
   "Payment Systems": "Node.js",
   "Systems Design": "System Design",
-  "Axios": "Node.js",
+  Axios: "Node.js",
   "Legacy Code Optimization": "OOP",
   "Package Management": "Node.js",
   "SQL Server Administration": "MySQL",

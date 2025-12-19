@@ -9,13 +9,17 @@ import {
   DraftingCompassIcon,
   GraduationCapIcon,
   LinkIcon,
-  ShieldIcon
+  ShieldIcon,
 } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
 import { cn } from "@/shared/lib/utils";
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/shared/ui/collapsible";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/shared/ui/collapsible";
 import { Separator } from "./separator";
 
 const iconMap = {
@@ -108,7 +112,11 @@ function ExperienceItem({ experience }: { experience: ExperienceItemType }) {
   );
 }
 
-function ExperiencePositionItem({ position }: { position: ExperiencePositionItemType }) {
+function ExperiencePositionItem({
+  position,
+}: {
+  position: ExperiencePositionItemType;
+}) {
   const [isOpen, setIsOpen] = useState(position.isExpanded ?? false);
 
   useEffect(() => {
@@ -133,8 +141,13 @@ function ExperiencePositionItem({ position }: { position: ExperiencePositionItem
               >
                 <ExperienceIcon className="h-4 w-4" />
               </div>
-              <h4 className="flex-1 text-base font-medium text-[var(--main)]">{position.title}</h4>
-              <div className="shrink-0 text-[var(--secondary)] [&_svg]:h-4 [&_svg]:w-4" aria-hidden>
+              <h4 className="flex-1 text-base font-medium text-[var(--main)]">
+                {position.title}
+              </h4>
+              <div
+                className="shrink-0 text-[var(--secondary)] [&_svg]:h-4 [&_svg]:w-4"
+                aria-hidden
+              >
                 {isOpen ? <ChevronsDownUpIcon /> : <ChevronsUpDownIcon />}
               </div>
             </div>
@@ -164,14 +177,20 @@ function ExperiencePositionItem({ position }: { position: ExperiencePositionItem
           <motion.div
             key={isOpen ? "open" : "closed"}
             initial={{ opacity: 0, height: 0 }}
-            animate={isOpen ? { opacity: 1, height: "auto" } : { opacity: 0, height: 0 }}
+            animate={
+              isOpen
+                ? { opacity: 1, height: "auto" }
+                : { opacity: 0, height: 0 }
+            }
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25 }}
             style={{ overflow: "hidden" }}
           >
             {isOpen && (
               <CollapsibleContent className="overflow-hidden">
-                {position.description && <DescriptionList description={position.description} />}
+                {position.description && (
+                  <DescriptionList description={position.description} />
+                )}
                 {position.skills && <SkillsSection skills={position.skills} />}
               </CollapsibleContent>
             )}
@@ -202,10 +221,7 @@ function SkillsSection({ skills }: { skills: string[] }) {
     <div className="pl-9 max-md:pl-2">
       <div className="flex flex-wrap gap-2 mt-2">
         {skills.map((skill, idx) => (
-          <span
-            key={idx}
-            className="skill-badge"
-          >
+          <span key={idx} className="skill-badge">
             {skill}
           </span>
         ))}
@@ -214,7 +230,13 @@ function SkillsSection({ skills }: { skills: string[] }) {
   );
 }
 
-export function WorkExperience({ className, experiences }: { className?: string; experiences: ExperienceItemType[] }) {
+export function WorkExperience({
+  className,
+  experiences,
+}: {
+  className?: string;
+  experiences: ExperienceItemType[];
+}) {
   return (
     <div className={cn("px-4", className)}>
       {experiences.map((experience) => (

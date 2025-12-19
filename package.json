@@ -12,6 +12,7 @@
     "serve": "npx serve@latest out"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@hookform/resolvers": "^4.1.2",
     "@radix-ui/react-accordion": "^1.2.8",
     "@radix-ui/react-alert-dialog": "^1.1.11",
@@ -48,7 +49,6 @@
     "clsx": "^2.1.1",
     "cmdk": "^1.1.1",
     "color-thief-browser": "^2.0.2",
-    "emailjs-com": "^3.2.0",
     "embla-carousel-react": "^8.6.0",
     "framer-motion": "^12.4.1",
     "gsap": "^3.13.0",
@@ -71,7 +71,7 @@
     "sonner": "^1.7.4",
     "tailwind-merge": "^2.6.0",
     "vaul": "^1.1.2",
-    "zod": "^3.24.2"
+    "zod": "^4.2.1"
   },
   "devDependencies": {
     "@types/node": "^20",

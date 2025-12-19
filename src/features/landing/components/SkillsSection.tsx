@@ -20,7 +20,7 @@ const categories: SkillCategory[] = Array.from(
     if (!map.has(skill.category)) map.set(skill.category, []);
     map.get(skill.category)!.push(skill as Skill); // cast here
     return map;
-  }, new Map<string, Skill[]>())
+  }, new Map<string, Skill[]>()),
 ).map(([title, skills]) => ({ title, skills }));
 
 export default function SkillsSection() {
@@ -33,13 +33,6 @@ export default function SkillsSection() {
           data-ninja-font="doto_bold_normal_rg90b"
         >
           Skills{" "}
-          <span
-            className="font-jetbrains-mono text-sm font-normal tracking-wider"
-            style={{ color: "var(--secondary)" }}
-            data-ninja-font="jetbrainsmono_regular_normal_smv0q"
-          >
-            Which I use/know
-          </span>
         </h1>
         <p
           className="font-figtree text-sm mt-2 mb-4"

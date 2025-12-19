@@ -9,27 +9,22 @@ export type SkillBadgeProps = {
   showProficiency?: boolean;
 };
 
-export function SkillBadge({ 
-  skill, 
-  className, 
-  icon, 
+export function SkillBadge({
+  skill,
+  className,
+  icon,
   proficiency,
-  showProficiency = false 
+  showProficiency = false,
 }: SkillBadgeProps) {
   return (
     <span
-      className={cn(
-      "skill-badge",
-        className
-      )}
+      className={cn("skill-badge", className)}
       style={{
         color: "var(--foreground)",
       }}
     >
       {icon && (
-        <span className="inline-flex items-center flex-shrink-0">
-          {icon}
-        </span>
+        <span className="inline-flex items-center flex-shrink-0">{icon}</span>
       )}
       <span className="font-medium">{skill}</span>
     </span>
@@ -39,7 +34,10 @@ export function SkillBadge({
 export type SkillsListProps = {
   skills: string[];
   iconMap?: Record<string, React.ReactNode>;
-  proficiencyMap?: Record<string, "beginner" | "intermediate" | "advanced" | "expert">;
+  proficiencyMap?: Record<
+    string,
+    "beginner" | "intermediate" | "advanced" | "expert"
+  >;
   className?: string;
   showProficiency?: boolean;
 };
@@ -81,15 +79,20 @@ export type SkillCategoryCardProps = {
   className?: string;
 };
 
-export function SkillCategoryCard({ 
-  title, 
-  skills, 
+export function SkillCategoryCard({
+  title,
+  skills,
   showProficiency = false,
-  className 
+  className,
 }: SkillCategoryCardProps) {
   return (
-    <div className={cn("space-y-3 p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900", className)}>
-      <h3 
+    <div
+      className={cn(
+        "space-y-3 p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900",
+        className,
+      )}
+    >
+      <h3
         className="text-sm font-bold uppercase tracking-wider flex items-center gap-2"
         style={{ color: "var(--secondary)" }}
       >

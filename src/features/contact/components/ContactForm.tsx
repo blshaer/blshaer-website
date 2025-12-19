@@ -12,8 +12,8 @@ import {
 } from "@/shared/ui/form";
 import { Input } from "@/shared/ui/input";
 import { Textarea } from "@/shared/ui/textarea";
+import emailjs from "@emailjs/browser";
 import { zodResolver } from "@hookform/resolvers/zod";
-import emailjs from "emailjs-com";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
