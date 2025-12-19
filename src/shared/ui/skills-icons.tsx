@@ -37,7 +37,7 @@ import {
 import { TbApi } from "react-icons/tb";
 
 // Icon color mapping for brand colors
-const iconColors: Record<string, string> = {
+export const iconColors: Record<string, string> = {
   SiJavascript: "#F7DF1E",
   SiTypescript: "#3178C6",
   SiPython: "#3776AB",
@@ -70,6 +70,12 @@ const iconColors: Record<string, string> = {
   SiOpenai: "#412991",
   FaProjectDiagram: "#06B6D4",
   FaCode: "#10B981",
+  SiRedis: "#DC382D",
+  FaShieldAlt: "#3498DB",
+  FaStream: "#9B59B6",
+  FaVial: "#1ABC9C",
+  FaChartLine: "#2ECC71",
+  FaTasks: "#E67E22",
 };
 
 const iconComponents: Record<

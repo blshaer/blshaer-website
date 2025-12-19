@@ -19,6 +19,17 @@ const iconsMap = {
   Facebook: FaFacebook,
 };
 
+const colorsMap = {
+  GitHub: "text-[#181717] dark:text-[#ffffff]",
+  LinkedIn: "text-[#0A66C2]",
+  YouTube: "text-[#FF0000]",
+  Twitter: "text-[#1DA1F2]",
+  Email: "text-[#EA4335]",
+  "Email Me": "text-[#EA4335]",
+  WhatsApp: "text-[#25D366]",
+  Facebook: "text-[#1877F2]",
+};
+
 function HeroSocialLinks() {
   const { socialLinks } = useSocialLinks(true);
 
@@ -40,6 +51,9 @@ function HeroSocialLinks() {
             {socialLinks.map((social) => {
               const IconComponent =
                 iconsMap[social.platform as keyof typeof iconsMap];
+              const colorClass =
+                colorsMap[social.platform as keyof typeof colorsMap] ||
+                "text-[var(--paragraph)]";
 
               return (
                 <a
@@ -52,7 +66,7 @@ function HeroSocialLinks() {
                   {IconComponent && (
                     <IconComponent
                       aria-hidden="true"
-                      className="text-[var(--paragraph)]"
+                      className={colorClass}
                       size={16}
                     />
                   )}

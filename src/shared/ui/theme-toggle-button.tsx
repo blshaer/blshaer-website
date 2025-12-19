@@ -3,10 +3,7 @@
 import { useTheme } from "next-themes";
 import React from "react";
 
-import {
-  AnimationStart,
-  AnimationVariant,
-} from "@/features/theme/utils/theme-animations";
+import { AnimationStart, AnimationVariant } from "@/features/theme/utils/theme-animations";
 
 interface ThemeToggleAnimationProps {
   variant?: AnimationVariant;
