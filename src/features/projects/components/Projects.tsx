@@ -79,7 +79,7 @@ const projectsData: Project[] = [
     description: `• Tool for creating, exploring, and exporting CSS gradients.\n\n• Real-time preview and export options for quick workflow.\n\n• Helps developers and designers customize gradients easily.`,
     type: "Tool",
     website: "https://gradientscss.vercel.app/",
-    github: "https://github.com/projects/gradientscss",
+    github: "https://github.com/blshaer/gradientscss",
     technologies: [
       "React",
       "TypeScript",
