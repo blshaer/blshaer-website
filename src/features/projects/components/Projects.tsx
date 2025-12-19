@@ -3,7 +3,7 @@
 import { SkillsList } from "@/shared/ui/skills";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
-import { AiOutlineBranches } from "react-icons/ai";
+import { AiOutlineBranches, AiOutlinePlayCircle } from "react-icons/ai";
 
 interface Project {
   id: string;
@@ -182,6 +182,25 @@ function ProjectTechnologies({ technologies }: { technologies: string[] }) {
   );
 }
 
+function ProjectVideo({ videoUrl }: { videoUrl?: string }) {
+  if (!videoUrl) return null;
+  return (
+    <li className="flex items-center gap-2">
+      <AiOutlinePlayCircle className="text-[var(--headline)]" />
+      <strong style={{ color: "var(--headline)" }}>Video:</strong>
+      <a
+        href={videoUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="underline"
+        style={{ color: "var(--link-color)" }}
+      >
+        Watch Video
+      </a>
+    </li>
+  );
+}
+
 const Projects = () => {
   const [openProjectId, setOpenProjectId] = useState<string | null>(null);
 
@@ -339,20 +358,8 @@ const Projects = () => {
                   style={{ color: "var(--card-paragraph)" }}
                 >
                   <ProjectDescription description={project.description} />
-                  {project.videoUrl && (
-                    <p className="mb-4 list-disc ml-6 space-y-2">
-                      <a
-                        href={project.videoUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="underline"
-                        style={{ color: "var(--link-color)" }}
-                      >
-                        Watch Video
-                      </a>
-                    </p>
-                  )}
                   <ul className="mb-2 space-y-2 ">
+                    <ProjectVideo videoUrl={project.videoUrl} />
                     <ProjectLinks github={project.github} />
                     <ProjectTechnologies technologies={project.technologies} />
                   </ul>
