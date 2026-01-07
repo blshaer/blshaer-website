@@ -11,8 +11,8 @@ import {
 } from "@/shared/ui/card";
 import Link from "next/link";
 import * as React from "react";
-import Folder from "../../../shared/ui/Folder";
-import { MagicCard } from "../../../shared/ui/MagicCard";
+import Folder from "./Folder";
+import { MagicCard } from "./MagicCard";
 
 interface Paper {
   title: string;
@@ -51,7 +51,7 @@ const ReusableCard = React.forwardRef<HTMLDivElement, ReusableCardProps>(
       coverImg,
       suptitle,
       className,
-      papers = [], // ✅ روابط الورق
+      papers = [],
       ...props
     },
     ref,

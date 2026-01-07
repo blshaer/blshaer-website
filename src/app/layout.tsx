@@ -1,8 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
-import Footer from "@/features/landing/components/Footer";
-import Navbar from "@/features/landing/components/Navbar";
+import Footer from "@/features/landing/components/layouts/Footer";
+import Navbar from "@/features/landing/components/layouts/Navbar";
 import { ThemeProvider } from "@/features/theme/utils/theme-provider";
 import { domain, email, webImage, websitePath } from "@/shared/data/Links";
 import BackgroundEffect from "@/shared/ui/backgroundEffect";
@@ -126,7 +126,7 @@ export default function RootLayout({
               sameAs: [
                 "https://github.com/blshaer",
                 "https://www.linkedin.com/in/blshaer/",
-                "https://www.youtube.com/@Codewithbaraa",
+                "https://www.youtube.com/@blshaer",
               ],
               jobTitle: "Full Stack Developer",
               worksFor: {

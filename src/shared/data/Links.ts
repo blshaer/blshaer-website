@@ -1,13 +1,13 @@
-export const domain = "blshaer.vercel.app";
-export const email = "contact.alshaer@gmail.com";
+export const domain = "blshaer.rf.gd";
+export const email = "blshaer@outlook.com";
 export const phoneNumber = "970599349034";
 export const linkedin = "https://www.linkedin.com/in/blshaer/";
 export const github = "https://github.com/blshaer";
 export const whatsapp = `https://wa.me/${phoneNumber}`;
-export const youtube = "https://www.youtube.com/@Codewithbaraa";
+export const youtube = "https://www.youtube.com/@blshaer";
 export const mailto = `mailto:${email}`;
 export const alazhar = "https://www.alazhar.edu.ps/eng/index.asp";
-export const website = "https://blshaer.vercel.app/";
+export const website = "https://blshaer.rf.gd/";
 
 export const websitePath = {
   main: `${website}`,

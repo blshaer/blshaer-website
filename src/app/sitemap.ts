@@ -4,7 +4,7 @@ import { MetadataRoute } from "next";
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://blshaer.vercel.app";
+  const baseUrl = "https://blshaer.rf.gd";
 
   // Main pages
   const routes = ["", "/projects", "/posts", "/contact"].map((route) => ({

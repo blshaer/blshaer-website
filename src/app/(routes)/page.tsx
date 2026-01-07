@@ -1,10 +1,10 @@
 "use client";
 
 import PostSection from "@/features/blog/components/PostSection";
-import HeroSection from "@/features/landing/components/HeroSection";
-import RecommendationsSection from "@/features/landing/components/RecommendationsSection";
-import SkillsSection from "@/features/landing/components/SkillsSection";
-import WorkSection from "@/features/landing/components/WorkExperienceSection";
+import HeroSection from "@/features/landing/components/sections/HeroSection";
+import RecommendationsSection from "@/features/landing/components/sections/RecommendationsSection";
+import SkillsSection from "@/features/landing/components/sections/SkillsSection";
+import WorkSection from "@/features/experience/components/WorkExperienceSection";
 import Projects from "@/features/projects/components/Projects";
 import { mailto } from "@/shared/data";
 import { ScrollEffect } from "@/shared/lib/animations";

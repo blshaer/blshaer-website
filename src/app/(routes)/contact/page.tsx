@@ -8,8 +8,8 @@ import {
   BreadcrumbSeparator,
 } from "@/shared/ui/breadcrumb";
 
-import { webImage, websitePath } from "@/shared/data/Links";
 import ContactForm from "@/features/contact/components/ContactForm";
+import { webImage, websitePath } from "@/shared/data/Links";
 
 // Enhanced metadata for better SEO
 export const metadata: Metadata = {

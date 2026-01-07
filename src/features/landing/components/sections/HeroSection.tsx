@@ -87,7 +87,7 @@ function HeroSection() {
       <div className="header-content">
         <h1 className="header-title text-[var(--headline)]">Baraa Alshaer</h1>
         <h2 className="subtitle capitalize text-[var(--headline)]">
-          Full-Stack Developer | AI Integration Specialist
+          Full-Stack Engineer
         </h2>
         <p className="text-[var(--paragraph)] mt-4">
           I build intelligent, scalable software solutions by combining

@@ -1,6 +1,6 @@
 "use client";
 
-import Logo from "@/features/landing/components/Logo";
+import Logo from "@/features/landing/components/layouts/Logo";
 import ToggleMode from "@/features/theme/components/ToggleMode";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";

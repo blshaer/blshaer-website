@@ -89,7 +89,7 @@ export function PageTransition({
         animate="in"
         exit="out"
         variants={pageVariants}
-        transition={pageTransition}
+        transition={pageTransition as any}
         className={className}
       >
         {children}
@@ -112,7 +112,7 @@ export function SlideTransition({
         animate="in"
         exit="out"
         variants={slideVariants}
-        transition={slideTransition}
+        transition={slideTransition as any}
         className={className}
       >
         {children}
@@ -135,7 +135,7 @@ export function FadeTransition({
         animate="in"
         exit="out"
         variants={fadeVariants}
-        transition={fadeTransition}
+        transition={fadeTransition as any}
         className={className}
       >
         {children}

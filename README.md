@@ -107,10 +107,10 @@ This project is open source and available under the [MIT License](LICENSE).
 
 **Baraa Alshaer**
 
-- Email: contact.alshaer@gmail.com
+- Email: blshaer@outlook.com
 - LinkedIn: [linkedin.com/in/blshaer](https://linkedin.com/in/blshaer)
 - GitHub: [github.com/blshaer](https://github.com/blshaer)
-- Website: [blshaer.vercel.app](https://blshaer.vercel.app)
+- Website: [blshaer.rf.gd](https://blshaer.rf.gd)
 
 ---
 

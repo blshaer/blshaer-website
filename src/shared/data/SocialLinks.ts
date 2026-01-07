@@ -36,7 +36,7 @@ export const socialLinksData: SocialLink[] = [
   {
     _id: "social_3",
     platform: "YouTube",
-    url: "https://www.youtube.com/@Codewithbaraa",
+    url: "https://www.youtube.com/@blshaer",
     icon: "FaYoutube",
     iconLibrary: "fa",
     isActive: true,
@@ -47,7 +47,7 @@ export const socialLinksData: SocialLink[] = [
   {
     _id: "social_4",
     platform: "Email",
-    url: "mailto:contact.alshaer@gmail.com",
+    url: "mailto:blshaer@outlook.com",
     icon: "FaEnvelope",
     iconLibrary: "fa",
     isActive: true,
