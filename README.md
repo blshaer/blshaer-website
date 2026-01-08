@@ -134,7 +134,3 @@ npm run deploy
 For inquiries, please reach out via [GitHub](https://github.com/blshaer) or [LinkedIn](https://www.linkedin.com/in/barraaalshaer/).
 
 ---
-
-<p align="center">Developed by <a href="https://github.com/blshaer">Baraa Alshaer</a></p>
-
----
