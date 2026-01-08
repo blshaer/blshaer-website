@@ -1,15 +1,10 @@
 import { Metadata } from "next";
 
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbSeparator,
-} from "@/shared/ui/breadcrumb";
+
 
 import ContactForm from "@/features/contact/components/ContactForm";
 import { webImage, websitePath } from "@/shared/data/Links";
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbSeparator } from "@/shared/ui";
 
 // Enhanced metadata for better SEO
 export const metadata: Metadata = {

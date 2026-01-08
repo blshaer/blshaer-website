@@ -1,62 +1,83 @@
-# Baraa Alshaer - Portfolio
+# blshaer-website (Portfolio)
 
-> A modern, high-performance portfolio website built with Next.js, TypeScript, and Tailwind CSS.
+A modern, high-performance portfolio website built with **Next.js**, **TypeScript**, and **Tailwind CSS**.
 
-## Quick Start
+---
+![Portfolio Screenshot](./public/screenshots/screenshot.png)
+---
+
+## Getting Started
+
+To get this project up and running locally, follow the steps below:
+
+### 1. Clone the Repository
 
 ```bash
-# Clone the repository
-git clone https://github.com/blshaer/alshaer.git
-cd alshaer
+git clone https://github.com/blshaer/blshaer-website.git
+cd blshaer-website
+```
 
-# Install dependencies
+### 2. Install Dependencies
+
+```bash
 npm install
+```
 
-# Start development server
+### 3. Run the Development Server
+
+```bash
 npm run dev
 ```
 
-Open [http://localhost:7000](http://localhost:7000) to view it in your browser.
+Once the development server is running, open [http://localhost:7000](http://localhost:7000) in your browser to view the site.
+
+---
 
 ## Features
 
-- **Static Export** - Deploy anywhere, no server required
-- **Fully Responsive** - Optimized for all devices
-- **Theme Support** - Dark/Light mode with system preference detection
-- **Performance First** - Optimized for speed and SEO
-- **Email Integration** - Contact form powered by EmailJS
+- **Static Export**: Deployable anywhere without requiring a server.
+- **Responsive Design**: Optimized for all devices and screen sizes.
+- **Dark/Light Theme**: Automatically adjusts based on system preferences.
+- **Performance Optimized**: Built with speed and SEO in mind.
+- **Email Integration**: Contact form functionality powered by **EmailJS**.
+
+---
 
 ## Tech Stack
 
-- [Next.js 15](https://nextjs.org/) - React framework
-- [TypeScript](https://www.typescriptlang.org/) - Type safety
-- [Tailwind CSS](https://tailwindcss.com/) - Styling
-- [Framer Motion](https://www.framer.com/motion/) - Animations
-- [Radix UI](https://www.radix-ui.com/) - UI components
-- [Lucide React](https://lucide.dev/) - Icons
+- **[Next.js](https://nextjs.org/)** - React framework for server-side rendering and static site generation.
+- **[TypeScript](https://www.typescriptlang.org/)** - Type-safe JavaScript for better maintainability.
+- **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first CSS framework for faster UI development.
+- **[Framer Motion](https://www.framer.com/motion/)** - Library for high-performance animations.
+- **[Radix UI](https://www.radix-ui.com/)** - Set of accessible and customizable UI components.
+- **[Lucide React](https://lucide.dev/)** - A collection of customizable, high-quality icons.
+
+---
 
 ## Project Structure
 
 ```
 src/
-├── app/                    # Next.js app directory
-├── features/               # Feature modules
-│   ├── projects/          # Projects section
-│   ├── blog/              # Blog posts
-│   └── contact/           # Contact form
-├── layouts/               # Layout components
-├── shared/
-│   ├── ui/                # Reusable UI components
-│   ├── lib/               # Utility functions
-│   └── data/              # Static content
-└── styles/                # Global styles
+├── app/                    # Main app directory for Next.js routing and pages
+├── features/               # Feature modules that contain individual sections of the portfolio
+│   ├── projects/           # Portfolio projects section
+│   ├── blog/               # Blog posts (if applicable)
+│   └── contact/            # Contact form section
+├── layouts/                # Layout components (e.g., header, footer, main layout)
+├── shared/                 
+│   ├── ui/                 # Reusable UI components
+│   ├── lib/                # Utility functions and helpers
+│   └── data/               # Static data like personal info, projects, experiences, etc.
+└── styles/                 # Global styles and Tailwind configurations
 ```
+
+---
 
 ## Configuration
 
 ### Environment Variables
 
-Create a `.env.local` file for the contact form (optional):
+To enable email functionality for the contact form, create a `.env.local` file and include the following:
 
 ```env
 NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_service_id
@@ -64,54 +85,56 @@ NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_template_id
 NEXT_PUBLIC_EMAILJS_USER_ID=your_user_id
 ```
 
-### Customization
+### Customizing Your Portfolio
 
-Edit the following files to personalize your portfolio:
+To personalize the content in your portfolio, modify the following files:
 
-- `src/shared/data/Profile.ts` - Personal information
-- `src/shared/data/Experiences.ts` - Work history
-- `src/shared/data/Projects.ts` - Portfolio projects
+- **`src/shared/data/Profile.ts`** - Personal information (name, bio, etc.).
+- **`src/shared/data/Experiences.ts`** - Your work experience and career history.
+- **`src/shared/data/Projects.ts`** - Details of your portfolio projects.
+
+---
 
 ## Build & Deploy
 
 ### Production Build
 
+To create a production build of the website, run:
+
 ```bash
 npm run build
 ```
 
-This creates an optimized static export in the `out/` directory.
+This will generate an optimized static export in the `out/` directory.
 
 ### Deployment Options
 
-**Vercel** (Recommended)
+#### Vercel (Recommended)
+
+For an easy deployment experience, you can deploy the site directly to [Vercel](https://vercel.com/) with:
 
 ```bash
 npm run deploy
 ```
 
-**Netlify**
+#### Netlify
 
-- Build command: `npm run build`
-- Publish directory: `out`
+1. Set the **Build Command** to `npm run build`.
+2. Set the **Publish Directory** to `out`.
 
-**GitHub Pages**
+#### GitHub Pages
 
-- Push the `out/` directory to your `gh-pages` branch
-
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## Contact
-
-**Baraa Alshaer**
-
-- Email: blshaer@outlook.com
-- LinkedIn: [linkedin.com/in/blshaer](https://linkedin.com/in/blshaer)
-- GitHub: [github.com/blshaer](https://github.com/blshaer)
-- Website: [blshaer.rf.gd](https://blshaer.rf.gd)
+1. Build the site: `npm run build`.
+2. Push the contents of the `out/` directory to your `gh-pages` branch.
 
 ---
 
-<p align="center">Developed by Baraa Alshaer</p>
+## Contact
+
+For inquiries, please reach out via [GitHub](https://github.com/blshaer) or [LinkedIn](https://www.linkedin.com/in/barraaalshaer/).
+
+---
+
+<p align="center">Developed by <a href="https://github.com/blshaer">Baraa Alshaer</a></p>
+
+---

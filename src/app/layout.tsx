@@ -1,13 +1,13 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
+import FloatingActionButton from "@/features/landing/components/layouts/FloatingActionButton";
 import Footer from "@/features/landing/components/layouts/Footer";
 import Navbar from "@/features/landing/components/layouts/Navbar";
-import { ThemeProvider } from "@/features/theme/utils/theme-provider";
+import { ThemeProvider } from "@/features/theme/providers/ThemeProvider";
 import { domain, email, webImage, websitePath } from "@/shared/data/Links";
-import BackgroundEffect from "@/shared/ui/backgroundEffect";
-import { CustomDialogProvider } from "@/shared/ui/custom-dialog";
-import FloatingActionButton from "@/shared/ui/FloatingActionButton";
+import BackgroundEffect from "@/shared/ui/effects/backgroundEffect";
+import { CustomDialogProvider } from "@/shared/ui/overlays/custom-dialog";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Toaster } from "sonner";

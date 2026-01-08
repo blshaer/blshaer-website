@@ -1,6 +1,6 @@
 "use client";
 
-import { useSocialLinks } from "@/shared/hooks/use-social-links";
+import { useSocialLinks } from "@/features/landing/hooks/use-social-links";
 import { ExternalLink } from "lucide-react";
 import Link from "next/link";
 import React, { useState } from "react";
@@ -107,11 +107,10 @@ const LinksSection: React.FC = () => {
             key={item._id}
           >
             <Link
-              className={` ${
-                hoveredIndex !== null && index !== hoveredIndex
+              className={` ${hoveredIndex !== null && index !== hoveredIndex
                   ? styles.socialLinkHover
                   : styles.socialLink
-              }`}
+                }`}
               target="_blank"
               rel="noopener noreferrer"
               href={item.url}

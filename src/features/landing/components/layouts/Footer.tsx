@@ -1,8 +1,8 @@
 "use client";
 
-import { useContent } from "@/shared/hooks/use-content";
+import { useContent } from "@/features/landing/hooks/use-content";
 import { scrollToTop } from "@/shared/lib/helper";
-import { Button } from "@/shared/ui/button";
+import { Button } from "@/shared/ui";
 import { motion } from "framer-motion";
 import {
   ArrowUp,

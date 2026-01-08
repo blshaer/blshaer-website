@@ -1,11 +1,11 @@
 "use client";
 
-import { useFeaturedRecommendations } from "@/shared/hooks/use-recommendations";
+import { useFeaturedRecommendations } from "@/features/landing/hooks/use-recommendations";
 import { ScrollEffect } from "@/shared/lib/animations";
 import { cn } from "@/shared/lib/utils";
-import { Avatar, AvatarFallback, AvatarImage } from "@/shared/ui/avatar";
-import { MagicCard } from "@/shared/ui/MagicCard";
-import { Skeleton } from "@/shared/ui/skeleton";
+import { Avatar, AvatarFallback, AvatarImage } from "@/shared/ui";
+import { MagicCard } from "@/shared/ui/";
+import { Skeleton } from "@/shared/ui/";
 import Link from "next/link";
 
 import { GoLinkExternal } from "react-icons/go";

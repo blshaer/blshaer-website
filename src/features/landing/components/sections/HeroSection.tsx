@@ -1,6 +1,6 @@
 "use client";
 
-import { useSocialLinks } from "@/shared/hooks/use-social-links";
+import { useSocialLinks } from "@/features/landing/hooks/use-social-links";
 import { memo } from "react";
 
 import { AiFillMail, AiFillTwitterCircle, AiFillYoutube } from "react-icons/ai";

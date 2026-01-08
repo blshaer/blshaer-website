@@ -4,11 +4,11 @@ import {
   BreadcrumbLink,
   BreadcrumbList,
   BreadcrumbSeparator,
-} from "@/shared/ui/breadcrumb";
+} from "@/shared/ui/";
 import { Metadata } from "next";
 
 import { webImage, websitePath } from "@/shared/data/Links";
-import PostsPreview from "@/features/blog/components/PostsPreview";
+import PostSection from "@/features/blog/components/PostSection";
 
 // Enhanced metadata for better SEO
 export const metadata: Metadata = {
@@ -81,7 +81,7 @@ export default function PostsPage() {
             </Breadcrumb>
           </div>
         </div>
-        <PostsPreview />
+        <PostSection />
       </div>
     </>
   );

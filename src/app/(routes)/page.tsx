@@ -1,16 +1,17 @@
 "use client";
 
 import PostSection from "@/features/blog/components/PostSection";
+import { ExperienceSection } from "@/features/experience";
 import HeroSection from "@/features/landing/components/sections/HeroSection";
 import RecommendationsSection from "@/features/landing/components/sections/RecommendationsSection";
 import SkillsSection from "@/features/landing/components/sections/SkillsSection";
-import WorkSection from "@/features/experience/components/WorkExperienceSection";
-import Projects from "@/features/projects/components/Projects";
+import { ProjectsSection } from "@/features/projects";
 import { mailto } from "@/shared/data";
 import { ScrollEffect } from "@/shared/lib/animations";
 import { Button } from "@/shared/ui";
-import ClickSpark from "@/shared/ui/ClickSpark";
-import ShinyText from "@/shared/ui/ShinyText";
+import ClickSpark from "@/shared/ui/effects/click-spark";
+import ShinyText from "@/shared/ui/effects/shiny-text";
+
 import Link from "next/link";
 import { MdEmail } from "react-icons/md";
 
@@ -24,11 +25,12 @@ export default function HomePage() {
       </div>
 
       <div id="work" className="py-4 border-t mt-6">
-        <WorkSection />
+        <ExperienceSection />
       </div>
 
       <div id="projects" className="py-4 border-t mt-6">
-        <Projects />
+                <ProjectsSection filterType="all" />
+
       </div>
 
       <div className="py-4 border-t mt-6">
@@ -53,7 +55,7 @@ export default function HomePage() {
                 text="Let's Work Together"
                 disabled={false}
                 speed={3}
-                className="text-2xl md:text-3xl font-bold mb-4 "
+                className="text-2xl md:text-3xl font-bold mb-4"
               />
               <p className="text-[var(--paragraph)] mb-6 max-w-2xl mx-auto">
                 I'm open to discussing new projects, creative ideas, or

@@ -14,7 +14,7 @@ export const contentData: Content[] = [
   {
     _id: "content_hero",
     section: "hero",
-    title: "Baraa Alshaer",
+    title: "Baraa Alshaer2",
     subtitle: "Full-Stack Developer",
     description:
       "I’m a full stack developer with 5 years of experience in front-end, back-end, and general software development. My main focus is integrating AI technologies to build smarter, more efficient web applications. I excel at creating clean, maintainable code and designing user-friendly solutions that solve real-world problems. Dedicated to continuous learning, I stay up to date with the latest trends in AI and modern development to deliver innovative, high-quality software.",

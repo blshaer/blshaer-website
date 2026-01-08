@@ -1,8 +1,8 @@
 "use client";
 
 import { Button } from "@/shared/ui";
-import FuzzyText from "@/shared/ui/FuzzyText";
-import { RandomizedTextEffect } from "@/shared/ui/text-randomized";
+import FuzzyText from "@/shared/ui/";
+import { RandomizedTextEffect } from "@/shared/ui/";
 import Link from "next/link";
 import { IoArrowBack } from "react-icons/io5";
 export default function NotFoundPage() {

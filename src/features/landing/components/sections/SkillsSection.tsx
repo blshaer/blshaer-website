@@ -1,7 +1,7 @@
 "use client";
 
-import { ALL_SKILLS, skillIconMap } from "@/shared/ui/all-skills";
-import { SkillsList } from "@/shared/ui/skills";
+import { ALL_SKILLS, skillIconMap } from "@/features/skills/components/all-skills";
+import { SkillsList } from "@/features/skills/components/skills";
 import { ReactNode } from "react";
 
 type Skill = {
