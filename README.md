@@ -131,6 +131,6 @@ npm run deploy
 
 ## Contact
 
-For inquiries, please reach out via [GitHub](https://github.com/blshaer) or [LinkedIn](https://www.linkedin.com/in/barraaalshaer/).
+For inquiries, please reach out via [GitHub](https://github.com/blshaer) or [LinkedIn](https://www.linkedin.com/in/blshaer/).
 
 ---
