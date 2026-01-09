@@ -5,7 +5,7 @@ import { ExperienceSection } from "@/features/experience";
 import HeroSection from "@/features/landing/components/sections/HeroSection";
 import RecommendationsSection from "@/features/landing/components/sections/RecommendationsSection";
 import SkillsSection from "@/features/landing/components/sections/SkillsSection";
-import { ProjectsSection } from "@/features/projects";
+import ProjectsSection from "@/features/projects/components/ProjectsSection";
 import { mailto } from "@/shared/data";
 import { ScrollEffect } from "@/shared/lib/animations";
 import { Button } from "@/shared/ui";

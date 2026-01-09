@@ -1,10 +1,10 @@
 "use client";
 
 import { cn } from "@/shared/lib/utils";
-import ClickSpark from "@/shared/ui/";
 import { MagicCard } from "@/shared/ui/";
 import { useContactForm } from "../hooks/useContactForm";
 import { ContactFormLayout } from "./ContactFormLayout";
+import ClickSpark from "@/shared/ui/effects/click-spark";
 
 export default function ContactForm() {
   const { form, isSubmitting, onSubmit } = useContactForm();

@@ -1,12 +1,12 @@
 "use client";
 
 import { Button } from "@/shared/ui";
-import { CustomDialog } from "@/shared/ui/";
 import { OTPInput } from "@/shared/ui/";
 import { AnimatePresence, motion } from "framer-motion";
 import { AlertTriangle, CheckCircle, Shield, Trash2 } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
+import { CustomDialog } from "./custom-dialog";
 
 interface SecureBulkDeleteProps {
   isOpen: boolean;

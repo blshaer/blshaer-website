@@ -1,13 +1,9 @@
 "use client";
 
-import { useExperiences } from "../hooks/use-experiences";
 import { ExperienceList } from "./ExperienceList";
 
 export default function ExperienceSection() {
-  const { experiences, loading, error } = useExperiences();
 
-  if (loading) return null;
-  if (error) return null;
 
   return (
     <section className="w-full ibmsans">
@@ -19,7 +15,7 @@ export default function ExperienceSection() {
         >
    My work experience.
         </p>
-      <ExperienceList experiences={experiences} />
+      <ExperienceList  />
     </section>
   );
 }

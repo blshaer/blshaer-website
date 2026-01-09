@@ -1,8 +1,8 @@
 "use client";
 
 import { Button } from "@/shared/ui";
-import FuzzyText from "@/shared/ui/";
 import { RandomizedTextEffect } from "@/shared/ui/";
+import FuzzyText from "@/shared/ui/effects/fuzzy-text";
 import Link from "next/link";
 import { IoArrowBack } from "react-icons/io5";
 

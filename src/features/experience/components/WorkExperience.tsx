@@ -15,9 +15,12 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 import { cn } from "@/shared/lib/utils";
-
 import { Separator } from "@/shared/ui/";
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/shared/ui/primitives/collapsible";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/shared/ui/primitives/collapsible";
 
 const iconMap = {
   code: CodeXmlIcon,
@@ -138,9 +141,11 @@ function ExperiencePositionItem({
               >
                 <ExperienceIcon className="h-4 w-4" />
               </div>
+
               <h4 className="flex-1 text-base font-medium text-[var(--main)]">
                 {position.title}
               </h4>
+
               <div
                 className="shrink-0 text-[var(--secondary)] [&_svg]:h-4 [&_svg]:w-4"
                 aria-hidden
@@ -148,6 +153,7 @@ function ExperiencePositionItem({
                 {isOpen ? <ChevronsDownUpIcon /> : <ChevronsUpDownIcon />}
               </div>
             </div>
+
             <div className="flex items-center gap-2 pl-9 text-sm text-[var(--secondary)]">
               {position.employmentType && (
                 <>
@@ -174,11 +180,7 @@ function ExperiencePositionItem({
           <motion.div
             key={isOpen ? "open" : "closed"}
             initial={{ opacity: 0, height: 0 }}
-            animate={
-              isOpen
-                ? { opacity: 1, height: "auto" }
-                : { opacity: 0, height: 0 }
-            }
+            animate={isOpen ? { opacity: 1, height: "auto" } : { opacity: 0, height: 0 }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25 }}
             style={{ overflow: "hidden" }}
@@ -199,14 +201,17 @@ function ExperiencePositionItem({
 }
 
 function DescriptionList({ description }: { description: string }) {
+  const items = description
+    .split("\n")
+    .map((s) => s.trim())
+    .filter(Boolean)
+    .map((s) => s.replace(/^•\s*/, ""));
+
   return (
     <div className="pt-2 pl-9 max-md:pl-2">
       <ul className="mb-4 list-disc ml-6 space-y-2">
-        {description.split("\n\n").map((desc, idx) => (
-          <li key={idx} className="flex items-start gap-2">
-            <span className="text-base leading-5">-</span>
-            <span>{desc.replace(/^•\s*/, "")}</span>
-          </li>
+        {items.map((text, idx) => (
+          <li key={idx}>{text}</li>
         ))}
       </ul>
     </div>
@@ -232,11 +237,13 @@ export function WorkExperience({
   experiences,
 }: {
   className?: string;
-  experiences: ExperienceItemType[];
+  experiences?: ExperienceItemType[]; 
 }) {
+  const safeExperiences = experiences ?? [];
+
   return (
     <div className={cn("px-4", className)}>
-      {experiences.map((experience) => (
+      {safeExperiences.map((experience) => (
         <ExperienceItem key={experience.id} experience={experience} />
       ))}
     </div>

@@ -1,5 +1,4 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { Project } from "../types/project.types";
 import { ProjectDescription } from "./ProjectDescription";
 import { ProjectLinks } from "./ProjectLinks";
 import { ProjectTechnologies } from "./ProjectTechnologies";
@@ -9,7 +8,7 @@ export function ProjectItem({
   isOpen,
   onToggle,
 }: {
-  project: Project;
+  project: any;
   isOpen: boolean;
   onToggle: () => void;
 }) {
