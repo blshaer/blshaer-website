@@ -53,6 +53,8 @@ export type ExperienceItemType = {
   companyUrl?: string;
 };
 
+
+
 function ExperienceItem({ experience }: { experience: ExperienceItemType }) {
   return (
     <div className="space-y-4 py-4">
