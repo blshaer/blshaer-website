@@ -27,7 +27,7 @@ export default function Footer() {
 
     if (!mounted) {
         return (
-            <footer className="flex items-center justify-between pt-10 pb-8 border-t border-border/10">
+            <footer className="flex items-center justify-between pt-10 pb-0 border-t border-border/10">
                 <p className="text-[0.78rem] text-muted-foreground/60">
                     © {currentYear} Baraa Alshaer
                 </p>
@@ -41,7 +41,7 @@ export default function Footer() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.25 }}
-            className="flex items-center justify-between pt-10 pb-8 border-t border-border/10"
+            className="flex items-center justify-between pt-10 pb-0 border-t border-border/10"
         >
             <p className="text-[0.78rem] text-muted-foreground/60">
                 © {currentYear} Baraa Alshaer

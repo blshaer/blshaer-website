@@ -17,7 +17,7 @@ export default function Page() {
       <div className="fixed top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-blue-500/5 dark:bg-blue-500/[0.03] blur-[120px] pointer-events-none" />
       <div className="fixed bottom-[10%] right-[-5%] w-[30%] h-[30%] rounded-full bg-blue-600/[0.04] dark:bg-blue-600/[0.02] blur-[100px] pointer-events-none" />
 
-      <div className="container relative z-10 flex flex-col gap-16 md:gap-28 pt-32 md:pt-24 lg:pt-18 pb-20">
+      <div className="container relative z-10 flex flex-col gap-8 md:gap-14 pt-20 md:pt-16 lg:pt-14 pb-0">
         <ProfileHeader />
         <Projects />
         <WorkedAs />

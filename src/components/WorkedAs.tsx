@@ -108,7 +108,7 @@ function WorkCard({ experience }: { experience: WorkExperience }) {
             {/* Header (always visible) */}
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="w-full flex items-start justify-between p-4 text-left group hover:bg-muted/50 transition-colors rounded-xl"
+                className="w-full flex flex-col sm:flex-row sm:items-start justify-between p-4 text-left group hover:bg-muted/50 transition-colors rounded-xl gap-3 sm:gap-4"
             >
                 <div className="flex flex-col gap-1">
                     <h3 className="text-[0.95rem] font-semibold text-foreground">
@@ -128,7 +128,7 @@ function WorkCard({ experience }: { experience: WorkExperience }) {
                     </div>
                 </div>
 
-                <div className="flex items-center gap-4 shrink-0 pt-1">
+                <div className="flex items-center gap-4 shrink-0 sm:pt-1">
                     <span className="text-[0.78rem] text-muted-foreground/60 font-medium">
                         {experience.period}
                     </span>
