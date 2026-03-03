@@ -1,0 +1,31 @@
+import React from "react";
+import ProfileHeader from "@/components/ProfileHeader";
+import Projects from "@/components/Projects";
+import WorkedAs from "@/components/WorkedAs";
+import Socials from "@/components/Socials";
+import Recommendations from "@/components/Recommendations";
+import Footer from "@/components/Footer";
+
+export default function Page() {
+  return (
+    <main className="min-h-screen bg-background relative overflow-hidden">
+      {/* Small Decorative Top Shadow/Glass Effect */}
+      <div className="fixed top-0 left-0 right-0 h-px z-[100] bg-foreground/5" />
+      <div className="fixed top-0 left-0 right-0 h-12 z-50 pointer-events-none bg-gradient-to-b from-background via-background/80 to-transparent backdrop-blur-[2px]" />
+
+      {/* Background aurora/glass glow for depth */}
+      <div className="fixed top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-blue-500/5 dark:bg-blue-500/[0.03] blur-[120px] pointer-events-none" />
+      <div className="fixed bottom-[10%] right-[-5%] w-[30%] h-[30%] rounded-full bg-blue-600/[0.04] dark:bg-blue-600/[0.02] blur-[100px] pointer-events-none" />
+
+      <div className="container relative z-10 flex flex-col gap-16 md:gap-28 pt-32 md:pt-24 lg:pt-18 pb-20">
+        <ProfileHeader />
+        <Projects />
+        <WorkedAs />
+        <Recommendations />
+        <Socials />
+        <Footer />
+      </div>
+      {/* <ScrollToTop /> */}
+    </main>
+  );
+}

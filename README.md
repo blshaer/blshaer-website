@@ -1,136 +1,36 @@
-# blshaer-website (Portfolio)
-
-A modern, high-performance portfolio website built with **Next.js**, **TypeScript**, and **Tailwind CSS**.
-
----
-![Portfolio Screenshot](./public/screenshots/screenshot.png)
----
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
-To get this project up and running locally, follow the steps below:
-
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/blshaer/blshaer-website.git
-cd blshaer-website
-```
-
-### 2. Install Dependencies
-
-```bash
-npm install
-```
-
-### 3. Run the Development Server
+First, run the development server:
 
 ```bash
 npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-Once the development server is running, open [http://localhost:7000](http://localhost:7000) in your browser to view the site.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
----
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-## Features
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-- **Static Export**: Deployable anywhere without requiring a server.
-- **Responsive Design**: Optimized for all devices and screen sizes.
-- **Dark/Light Theme**: Automatically adjusts based on system preferences.
-- **Performance Optimized**: Built with speed and SEO in mind.
-- **Email Integration**: Contact form functionality powered by **EmailJS**.
+## Learn More
 
----
+To learn more about Next.js, take a look at the following resources:
 
-## Tech Stack
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-- **[Next.js](https://nextjs.org/)** - React framework for server-side rendering and static site generation.
-- **[TypeScript](https://www.typescriptlang.org/)** - Type-safe JavaScript for better maintainability.
-- **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first CSS framework for faster UI development.
-- **[Framer Motion](https://www.framer.com/motion/)** - Library for high-performance animations.
-- **[Radix UI](https://www.radix-ui.com/)** - Set of accessible and customizable UI components.
-- **[Lucide React](https://lucide.dev/)** - A collection of customizable, high-quality icons.
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
----
+## Deploy on Vercel
 
-## Project Structure
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-```
-src/
-├── app/                    # Main app directory for Next.js routing and pages
-├── features/               # Feature modules that contain individual sections of the portfolio
-│   ├── projects/           # Portfolio projects section
-│   ├── blog/               # Blog posts (if applicable)
-│   └── contact/            # Contact form section
-├── layouts/                # Layout components (e.g., header, footer, main layout)
-├── shared/                 
-│   ├── ui/                 # Reusable UI components
-│   ├── lib/                # Utility functions and helpers
-│   └── data/               # Static data like personal info, projects, experiences, etc.
-└── styles/                 # Global styles and Tailwind configurations
-```
-
----
-
-## Configuration
-
-### Environment Variables
-
-To enable email functionality for the contact form, create a `.env.local` file and include the following:
-
-```env
-NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_service_id
-NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_template_id
-NEXT_PUBLIC_EMAILJS_USER_ID=your_user_id
-```
-
-### Customizing Your Portfolio
-
-To personalize the content in your portfolio, modify the following files:
-
-- **`src/shared/data/Profile.ts`** - Personal information (name, bio, etc.).
-- **`src/shared/data/Experiences.ts`** - Your work experience and career history.
-- **`src/shared/data/Projects.ts`** - Details of your portfolio projects.
-
----
-
-## Build & Deploy
-
-### Production Build
-
-To create a production build of the website, run:
-
-```bash
-npm run build
-```
-
-This will generate an optimized static export in the `out/` directory.
-
-### Deployment Options
-
-#### Vercel (Recommended)
-
-For an easy deployment experience, you can deploy the site directly to [Vercel](https://vercel.com/) with:
-
-```bash
-npm run deploy
-```
-
-#### Netlify
-
-1. Set the **Build Command** to `npm run build`.
-2. Set the **Publish Directory** to `out`.
-
-#### GitHub Pages
-
-1. Build the site: `npm run build`.
-2. Push the contents of the `out/` directory to your `gh-pages` branch.
-
----
-
-## Contact
-
-For inquiries, please reach out via [GitHub](https://github.com/blshaer) or [LinkedIn](https://www.linkedin.com/in/blshaer/).
-
----
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
