@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { SectionTitle } from "./ProfileHeader";
 
@@ -40,7 +41,14 @@ export default function Recommendations() {
             transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
             className="flex flex-col gap-6"
         >
-            <SectionTitle>recommendations.</SectionTitle>
+            <Link
+                href="https://www.linkedin.com/in/blshaer/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-fit hover:opacity-70 transition-opacity"
+            >
+                <SectionTitle>Linkedin recommendations.</SectionTitle>
+            </Link>
 
             <div className="flex flex-col gap-8">
                 {RECOMMENDATIONS.map((rec, index) => (
@@ -52,7 +60,7 @@ export default function Recommendations() {
                                 {rec.name}
                             </h3>
                             <p className="text-[0.82rem] text-muted-foreground uppercase tracking-wider font-medium">
-                                {rec.role} <span className="text-muted-foreground/30 mx-1">•</span> {rec.company}
+                                {rec.role}<span className="text-muted-foreground/30 mx-1">•</span>{rec.company}
                             </p>
                         </div>
 

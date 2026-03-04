@@ -17,7 +17,7 @@ interface Project {
 const PROJECTS: Project[] = [
     {
         name: "Samtax",
-        stack: "full-stack / automation",
+        stack: "full-stack / architecture",
         links: [
             { label: "Live Preview", href: "https://sam-tax.com/" },
             { label: "GitHub", href: "https://github.com/blshaer" },
@@ -27,13 +27,13 @@ const PROJECTS: Project[] = [
         name: "SFB – Sustainable Form Builder",
         stack: "frontend / architecture",
         links: [
-            { label: "Live Preview", href: "https://github.com/blshaer" },
-            { label: "GitHub", href: "https://github.com/blshaer" },
+            { label: "Live Preview", href: "https://sfb-app.com/en" },
+            { label: "Demo", href: "https://youtu.be/2IqjzGT1l1c?si=U3FpceOh5uEHqlfN" },
         ],
     },
     {
-        name: "GradlyAI",
-        stack: "ai integration / full-stack",
+        name: "Gradly AI",
+        stack: "AI / full-stack",
         links: [
             { label: "Live Preview", href: "https://github.com/blshaer" },
             { label: "GitHub", href: "https://github.com/blshaer" },
@@ -43,8 +43,7 @@ const PROJECTS: Project[] = [
         name: "Barber Academy",
         stack: "frontend / ui-ux",
         links: [
-            { label: "Live Preview", href: "https://github.com/blshaer" },
-            { label: "GitHub", href: "https://github.com/blshaer" },
+            { label: "Live Preview", href: "http://raoufzadi.vercel.app/" }
         ],
     },
 ];
@@ -67,10 +66,10 @@ export default function Projects() {
                     >
                         <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
                             <div className="flex flex-col gap-1 cursor-default">
-                                <h3 className="text-[1.05rem] font-bold text-foreground group-hover:text-primary transition-colors">
+                                <h3 className="text-[1.05rem] font-bold text-foreground transition-colors">
                                     {project.name}
                                 </h3>
-                                <p className="text-[0.68rem] sm:text-[0.58rem] text-muted-foreground uppercase tracking-widest font-semibold">
+                                <p className="text-[0.68rem] sm:text-[0.58rem] text-muted-foreground/50 uppercase tracking-widest font-semibold">
                                     {project.stack}
                                 </p>
                             </div>
@@ -83,7 +82,7 @@ export default function Projects() {
                                                 href={link.href}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="text-[0.82rem] text-muted-foreground hover:text-primary transition-all flex items-center gap-1 group/link"
+                                                className="text-[0.82rem] text-muted-foreground hover:text-foreground transition-all flex items-center gap-1 group/link"
                                             >
                                                 {link.label}
                                                 <div className="transition-transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5 opacity-60 group-hover/link:opacity-100">

@@ -20,7 +20,7 @@ export default function ProfileHeader() {
                         <img
                             src="https://github.com/blshaer.png"
                             alt="Baraa Alshaer"
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-cover transition-all duration-500 grayscale-0 hover:grayscale"
                             onError={(e) => {
                                 // Double fallback if needed
                                 (e.target as HTMLImageElement).src = "https://unavatar.io/github/blshaer";
@@ -45,19 +45,18 @@ export default function ProfileHeader() {
 
                 <div className="flex flex-col gap-4 text-[0.92rem] sm:text-[0.95rem] text-muted-foreground leading-[1.7]">
                     <p>
-                        I build intelligent, scalable software solutions by combining full-stack expertise with smart AI integration. With 5+ years of experience in front-end and back-end development, I create solutions that are robust, user-friendly, and powered by AI to solve real-world problems efficiently.
+                        I am a Full-Stack Engineer dedicated to crafting high-performance, scalable software solutions. With over 5+ years of professional experience, I specialize in building robust architectures and seamless digital experiences that drive real-world value.
                     </p>
 
                     <p>
-                        Driven by clean code and innovative design, I bring ideas to life with software that&apos;s both functional and future-ready. Let&apos;s build smarter applications together.
+                        I thrive at the intersection of clean, maintainable code and human-centric design, turning complex technical challenges into elegant, future-ready systems. Whether it&apos;s architecting a resilient back-end or polishing a pixel-perfect front-end, I build with precision and a relentless focus on quality.
                     </p>
                 </div>
 
                 {/* CTA Box */}
                 <div className="mt-2 bg-gradient-to-br from-muted/50 to-transparent border border-border/60 rounded-2xl p-6 flex flex-col gap-4 shadow-sm">
                     <p className="text-[0.95rem] text-foreground/90 leading-relaxed">
-                        Interested in working together? Feel <span className="font-semibold text-foreground underline decoration-primary/20 underline-offset-4">free</span> to schedule a
-                        meet!
+                        Need a technical partner to bring your vision to life? Let&apos;s discuss how we can <span className="font-semibold text-foreground underline decoration-primary/20 underline-offset-4">build</span> something exceptional.
                     </p>
                     <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-3">
                         <Link
@@ -67,7 +66,9 @@ export default function ProfileHeader() {
                             Get in Touch
                         </Link>
                         <Link
-                            href="#"
+                            href="https://drive.google.com/file/d/1dGBTO1TRdPL13lF1EvTRT8CRgOfLEo3X/view?usp=sharing"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="inline-flex items-center gap-1 text-[0.82rem] text-muted-foreground hover:text-foreground transition-colors"
                         >
                             Resume{" "}

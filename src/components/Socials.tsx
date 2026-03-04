@@ -62,7 +62,7 @@ export default function Socials() {
                             href={social.href}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center gap-3 px-3 py-2 -mx-3 rounded-xl group w-fit hover:bg-muted/40 transition-all border border-transparent hover:border-border/50"
+                            className="flex items-center gap-1 px-3 py-2 -mx-3 rounded-xl group w-fit hover:bg-muted/40 transition-all border border-transparent hover:border-border/50"
                         >
                             <span className="text-muted-foreground/60 group-hover:text-foreground transition-colors w-5 flex justify-center">
                                 {social.icon}

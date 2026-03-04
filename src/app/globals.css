@@ -80,25 +80,25 @@
 
 @layer base {
   :root {
-    --background: #ffffff;
-    --foreground: #09090b;
-    --muted: #f4f4f5;
-    --muted-foreground: #52525b;
+    --background: #fafaf9;
+    --foreground: #1c1917;
+    --muted: #f5f5f4;
+    --muted-foreground: #78716c;
     --card: #ffffff;
-    --card-foreground: #09090b;
+    --card-foreground: #1c1917;
     --popover: #ffffff;
-    --popover-foreground: #09090b;
-    --primary: #18181b;
-    --primary-foreground: #fafafa;
-    --secondary: #f4f4f5;
-    --secondary-foreground: #18181b;
-    --accent: #f4f4f5;
-    --accent-foreground: #18181b;
+    --popover-foreground: #1c1917;
+    --primary: #292524;
+    --primary-foreground: #fafaf9;
+    --secondary: #e7e5e4;
+    --secondary-foreground: #1c1917;
+    --accent: #f5f5f4;
+    --accent-foreground: #1c1917;
     --destructive: #ef4444;
-    --destructive-foreground: #fafafa;
-    --border: #e4e4e7;
-    --input: #e4e4e7;
-    --ring: #18181b;
+    --destructive-foreground: #fafaf9;
+    --border: #e7e5e4;
+    --input: #e7e5e4;
+    --ring: #292524;
     --radius: 1rem;
     --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
     --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.05);
@@ -140,3 +140,4 @@
 .container {
   @apply max-w-[680px] mx-auto px-5;
 }
+
