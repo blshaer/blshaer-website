@@ -16,13 +16,21 @@ export default function ProfileHeader() {
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-5">
                 <div className="relative">
                     {/* Profile Image Placeholder */}
-                    <div className="w-[72px] h-[72px] rounded-full bg-muted border border-border overflow-hidden flex items-center justify-center text-[9px] text-muted-foreground uppercase tracking-widest">
-                        img
+                    <div className="w-[72px] h-[72px] rounded-full bg-muted border border-border overflow-hidden flex items-center justify-center">
+                        <img
+                            src="https://github.com/blshaer.png"
+                            alt="Baraa Alshaer"
+                            className="w-full h-full object-cover"
+                            onError={(e) => {
+                                // Double fallback if needed
+                                (e.target as HTMLImageElement).src = "https://unavatar.io/github/blshaer";
+                            }}
+                        />
                     </div>
                 </div>
                 <div className="flex flex-col gap-0.5">
                     <h1 className="text-[1.5rem] sm:text-[1.7rem] font-bold tracking-tight text-foreground flex items-center gap-2">
-                        Baraa Alshaer{" "}
+                        Hi, I'm Baraa{" "}
                         <span className="inline-block animate-wave origin-[70%_70%]">
                             👋
                         </span>
@@ -46,9 +54,9 @@ export default function ProfileHeader() {
                 </div>
 
                 {/* CTA Box */}
-                <div className="mt-2 bg-muted/40 border border-border rounded-xl p-5 flex flex-col gap-4 transition-colors">
-                    <p className="text-[0.92rem] text-foreground/80">
-                        Interested in working together? Feel <span className="font-semibold text-foreground">free</span> to schedule a
+                <div className="mt-2 bg-gradient-to-br from-muted/50 to-transparent border border-border/60 rounded-2xl p-6 flex flex-col gap-4 shadow-sm">
+                    <p className="text-[0.95rem] text-foreground/90 leading-relaxed">
+                        Interested in working together? Feel <span className="font-semibold text-foreground underline decoration-primary/20 underline-offset-4">free</span> to schedule a
                         meet!
                     </p>
                     <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-3">
@@ -74,7 +82,7 @@ export default function ProfileHeader() {
 
 export function SectionTitle({ children }: { children: React.ReactNode }) {
     return (
-        <h2 className="text-[1.1rem] font-serif italic text-muted-foreground tracking-tight">
+        <h2 className="text-[1.15rem] font-serif italic text-foreground tracking-tight opacity-80">
             {children}
         </h2>
     );

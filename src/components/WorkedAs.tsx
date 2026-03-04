@@ -108,7 +108,7 @@ function WorkCard({ experience }: { experience: WorkExperience }) {
             {/* Header (always visible) */}
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="w-full flex flex-col sm:flex-row sm:items-start justify-between p-4 text-left group hover:bg-muted/50 transition-colors rounded-xl gap-3 sm:gap-4"
+                className="w-full flex flex-col sm:flex-row sm:items-start justify-between p-4 text-left group hover:bg-muted/40 transition-all rounded-xl gap-3 sm:gap-4 border border-transparent hover:border-border/50 hover:shadow-sm"
             >
                 <div className="flex flex-col gap-1">
                     <h3 className="text-[0.95rem] font-semibold text-foreground">
@@ -132,7 +132,7 @@ function WorkCard({ experience }: { experience: WorkExperience }) {
                     <span className="text-[0.78rem] text-muted-foreground/60 font-medium">
                         {experience.period}
                     </span>
-                    <div className="text-muted-foreground/60 group-hover:text-foreground transition-colors">
+                    <div className="text-muted-foreground/40 group-hover:text-foreground transition-colors">
                         {isOpen ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
                     </div>
                 </div>
@@ -166,7 +166,7 @@ function WorkCard({ experience }: { experience: WorkExperience }) {
                                 {experience.techStack.map((tech, i) => (
                                     <span
                                         key={i}
-                                        className="text-[0.68rem] text-muted-foreground bg-muted/50 border border-border px-2 py-1 rounded-md font-mono"
+                                        className="text-[0.7rem] text-muted-foreground bg-muted/30 border border-border/50 px-2 py-0.5 rounded-md font-medium"
                                     >
                                         {tech}
                                     </span>

@@ -9,6 +9,9 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@babel/runtime": "^7.28.6",
+    "@microlink/react": "^5.5.24",
+    "@radix-ui/react-hover-card": "^1.1.15",
     "@theme-toggles/react": "^4.1.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -19,6 +22,7 @@
     "radix-ui": "^1.4.3",
     "react": "19.2.3",
     "react-dom": "19.2.3",
+    "styled-components": "^6.3.11",
     "tailwind-merge": "^3.5.0",
     "tailwindcss-animate": "^1.0.7"
   },

@@ -6,6 +6,9 @@ import { motion } from "framer-motion";
 import { SectionTitle, ExternalIcon } from "./ProfileHeader";
 import { Mail } from "lucide-react";
 
+import { HoverCard, HoverCardContent, HoverCardTrigger } from "./ui/hover-card";
+import Microlink from "@microlink/react";
+
 interface Social {
     platform: string;
     icon: React.ReactNode;
@@ -24,13 +27,13 @@ const SOCIALS: Social[] = [
         platform: "GitHub",
         icon: <GitHubIcon />,
         handle: "@blshaer",
-        href: "https://github.com/blshaer",
+        href: "https://github.com/blshaer/",
     },
     {
         platform: "X",
         icon: <XIcon />,
         handle: "@blshaer",
-        href: "https://x.com/blshaer",
+        href: "https://x.com/blshaer/",
     },
     {
         platform: "Email",
@@ -51,27 +54,55 @@ export default function Socials() {
             <SectionTitle>socials.</SectionTitle>
 
             <div className="flex flex-col gap-2">
-                {SOCIALS.map((social, index) => (
-                    <Link
-                        key={index}
-                        href={social.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-3 py-1.5 group w-fit"
-                    >
-                        <span className="text-muted-foreground/60 group-hover:text-foreground transition-colors w-5 flex justify-center">
-                            {social.icon}
-                        </span>
-                        <span className="text-[0.88rem] text-muted-foreground group-hover:text-foreground transition-colors">
-                            {social.handle}
-                        </span>
-                        <span className="text-muted-foreground/30 group-hover:text-muted-foreground/80 transition-colors">
-                            <ExternalIcon />
-                        </span>
-                    </Link>
-                ))}
+                {SOCIALS.map((social, index) => {
+                    const isEmail = social.href.startsWith('mailto:');
+
+                    const content = (
+                        <Link
+                            href={social.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-3 px-3 py-2 -mx-3 rounded-xl group w-fit hover:bg-muted/40 transition-all border border-transparent hover:border-border/50"
+                        >
+                            <span className="text-muted-foreground/60 group-hover:text-foreground transition-colors w-5 flex justify-center">
+                                {social.icon}
+                            </span>
+                            <span className="text-[0.88rem] text-muted-foreground group-hover:text-foreground transition-colors">
+                                {social.handle}
+                            </span>
+                            <span className="text-muted-foreground/30 group-hover:text-muted-foreground/80 transition-colors">
+                                <ExternalIcon />
+                            </span>
+                        </Link>
+                    );
+
+                    if (isEmail) return <div key={index}>{content}</div>;
+
+                    return (
+                        <HoverCard key={index}>
+                            <HoverCardTrigger asChild>
+                                {content}
+                            </HoverCardTrigger>
+                            <HoverCardContent className="w-[300px] p-0 overflow-hidden border border-border bg-card shadow-2xl scale-95 animate-in fade-in duration-200 z-50" side="top" align="start">
+                                <Microlink
+                                    url={social.href}
+                                    size="medium"
+                                    style={{
+                                        width: '100%',
+                                        border: 'none',
+                                        borderRadius: '0px',
+                                        '--microlink-background-color': 'var(--card)',
+                                        '--microlink-color': 'var(--foreground)',
+                                        '--microlink-hover-background-color': 'var(--accent)',
+                                        '--microlink-border-color': 'transparent'
+                                    } as React.CSSProperties}
+                                />
+                            </HoverCardContent>
+                        </HoverCard>
+                    );
+                })}
             </div>
-        </motion.section>
+        </motion.section >
     );
 }
 

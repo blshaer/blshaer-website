@@ -20,7 +20,18 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: "Baraa Alshaer",
-  description: "Full stack engineer",
+  description: "Full-Stack Engineer & Software Architect",
+  appleWebApp: {
+    title: "Baraa",
+    statusBarStyle: "default",
+    capable: true,
+  },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-icon.png",
+  },
+  manifest: "/manifest.json",
 };
 
 import { ThemeProvider } from "@/components/theme-provider";

@@ -9,9 +9,8 @@ import Footer from "@/components/Footer";
 export default function Page() {
   return (
     <main className="min-h-screen bg-background relative overflow-hidden">
-      {/* Small Decorative Top Shadow/Glass Effect */}
-      <div className="fixed top-0 left-0 right-0 h-px z-[100] bg-foreground/5" />
-      <div className="fixed top-0 left-0 right-0 h-12 z-50 pointer-events-none bg-gradient-to-b from-background via-background/80 to-transparent backdrop-blur-[2px]" />
+      {/* Ultra-Soft Top Glass Mask - Minimized */}
+      <div className="fixed top-0 left-0 right-0 h-8 z-50 pointer-events-none bg-gradient-to-b from-background/95 via-background/30 to-transparent backdrop-blur-[1px]" />
 
       {/* Background aurora/glass glow for depth */}
       <div className="fixed top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-blue-500/5 dark:bg-blue-500/[0.03] blur-[120px] pointer-events-none" />

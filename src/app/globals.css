@@ -41,31 +41,54 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-sm: calc(var(--radius) - 4px);
 
-  --animate-wave: waving-hand 2.5s infinite;
+  --animate-wave: waving-hand 2.5s 1;
 
   @keyframes waving-hand {
-    0% { transform: rotate(0deg) }
-    10% { transform: rotate(14deg) }
-    20% { transform: rotate(-8deg) }
-    30% { transform: rotate(14deg) }
-    40% { transform: rotate(-4deg) }
-    50% { transform: rotate(10deg) }
-    60% { transform: rotate(0deg) }
-    100% { transform: rotate(0deg) }
+    0% {
+      transform: rotate(0deg)
+    }
+
+    10% {
+      transform: rotate(14deg)
+    }
+
+    20% {
+      transform: rotate(-8deg)
+    }
+
+    30% {
+      transform: rotate(14deg)
+    }
+
+    40% {
+      transform: rotate(-4deg)
+    }
+
+    50% {
+      transform: rotate(10deg)
+    }
+
+    60% {
+      transform: rotate(0deg)
+    }
+
+    100% {
+      transform: rotate(0deg)
+    }
   }
 }
 
 @layer base {
   :root {
-    --background: #fbfbfb;
-    --foreground: #1a1a1a;
-    --muted: #f1f1f1;
-    --muted-foreground: #737373;
+    --background: #ffffff;
+    --foreground: #09090b;
+    --muted: #f4f4f5;
+    --muted-foreground: #52525b;
     --card: #ffffff;
-    --card-foreground: #1a1a1a;
+    --card-foreground: #09090b;
     --popover: #ffffff;
-    --popover-foreground: #1a1a1a;
-    --primary: #171717;
+    --popover-foreground: #09090b;
+    --primary: #18181b;
     --primary-foreground: #fafafa;
     --secondary: #f4f4f5;
     --secondary-foreground: #18181b;
@@ -73,10 +96,12 @@
     --accent-foreground: #18181b;
     --destructive: #ef4444;
     --destructive-foreground: #fafafa;
-    --border: #e2e2e2;
-    --input: #e2e2e2;
-    --ring: #171717;
-    --radius: 0.5rem;
+    --border: #e4e4e7;
+    --input: #e4e4e7;
+    --ring: #18181b;
+    --radius: 1rem;
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.05);
   }
 
   .dark {

@@ -44,8 +44,8 @@ export default function Recommendations() {
 
             <div className="flex flex-col gap-8">
                 {RECOMMENDATIONS.map((rec, index) => (
-                    <div key={index} className="flex flex-col gap-4 relative">
-                        <div className="absolute left-[-14px] sm:left-[-20px] top-0 bottom-0 w-px bg-border group-hover:bg-primary transition-colors" />
+                    <div key={index} className="flex flex-col gap-4 relative group px-1">
+                        <div className="absolute left-[-14px] sm:left-[-20px] top-0 bottom-0 w-[2px] bg-border/40 group-hover:bg-primary/60 transition-colors" />
 
                         <div className="flex flex-col gap-1">
                             <h3 className="text-[1rem] font-bold text-foreground">

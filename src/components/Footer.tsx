@@ -27,11 +27,14 @@ export default function Footer() {
 
     if (!mounted) {
         return (
-            <footer className="flex items-center justify-between pt-10 pb-0 border-t border-border/10">
-                <p className="text-[0.78rem] text-muted-foreground/60">
-                    © {currentYear} Baraa Alshaer
-                </p>
-                <div className="w-8 h-8 rounded-full border border-border/10 bg-muted/20" />
+            <footer className="relative flex flex-col pt-10 pb-10">
+                <div className="absolute top-0 left-0 right-0 h-px bg-border/10" />
+                <div className="flex items-center justify-between">
+                    <p className="text-[0.78rem] text-muted-foreground/60">
+                        © {currentYear} Baraa Alshaer
+                    </p>
+                    <div className="w-8 h-8 rounded-full bg-muted/20" />
+                </div>
             </footer>
         );
     }
@@ -41,19 +44,22 @@ export default function Footer() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.25 }}
-            className="flex items-center justify-between pt-10 pb-0 border-t border-border/10"
+            className="relative flex flex-col pt-10 pb-10"
         >
-            <p className="text-[0.78rem] text-muted-foreground/60">
-                © {currentYear} Baraa Alshaer
-            </p>
-            <div className="flex items-center justify-center w-8 h-8 rounded-full border border-border bg-card text-muted-foreground hover:text-foreground transition-all shadow-sm overflow-hidden">
-                {/* @ts-ignore - React 19 ignores pointer capture props which are required by the library types */}
-                <Expand
-                    duration={750}
-                    toggled={theme === "dark"}
-                    toggle={toggleTheme}
-                    className="text-[1.2rem]"
-                />
+            <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border/50 to-transparent" />
+            <div className="flex items-center justify-between">
+                <p className="text-[0.78rem] text-muted-foreground/60">
+                    © {currentYear} Baraa Alshaer
+                </p>
+                <div className="flex items-center justify-center w-8 h-8 rounded-full   text-muted-foreground hover:text-foreground transition-all shadow-sm overflow-hidden">
+                    {/* @ts-ignore - React 19 ignores pointer capture props which are required by the library types */}
+                    <Expand
+                        duration={750}
+                        toggled={theme === "dark"}
+                        toggle={toggleTheme}
+                        className="text-[1.2rem]"
+                    />
+                </div>
             </div>
         </motion.footer>
     );
