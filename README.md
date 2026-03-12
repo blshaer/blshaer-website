@@ -1,8 +1,8 @@
-# blshaer — Personal Portfolio
+# Baraa Alshaer Personal Portfolio
 
 A minimal, modern personal portfolio site built with **Next.js**, **TypeScript**, and **Tailwind CSS**.
 
-Live at → [blshaer.dev](https://blshaer.dev) *(replace with your domain)*
+Live at → [blshaer.vercel.app](https://blshaer.vercel.app) *(replace with your domain)*
 
 ---
 
