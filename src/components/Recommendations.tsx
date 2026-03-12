@@ -1,8 +1,13 @@
 "use client";
 
-import React from "react";
-import Link from "next/link";
+import {
+    Tooltip,
+    TooltipContent,
+    TooltipProvider,
+    TooltipTrigger,
+} from "@/components/ui/tooltip"; // Adjust path based on your setup
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { SectionTitle } from "./ProfileHeader";
 
 interface Recommendation {
@@ -41,35 +46,45 @@ export default function Recommendations() {
             transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
             className="flex flex-col gap-6"
         >
-            <Link
-                href="https://www.linkedin.com/in/blshaer/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-fit hover:opacity-70 transition-opacity"
-            >
-                <SectionTitle>Linkedin recommendations.</SectionTitle>
-            </Link>
+            <SectionTitle>Linkedin recommendations.</SectionTitle>
 
-            <div className="flex flex-col gap-8">
-                {RECOMMENDATIONS.map((rec, index) => (
-                    <div key={index} className="flex flex-col gap-4 relative group px-1">
-                        <div className="absolute left-[-14px] sm:left-[-20px] top-0 bottom-0 w-[2px] bg-border/40 group-hover:bg-primary/60 transition-colors" />
+            <TooltipProvider delayDuration={200}>
+                <div className="flex flex-col gap-8">
+                    {RECOMMENDATIONS.map((rec, index) => (
+                        <Tooltip key={index}>
+                            <TooltipTrigger asChild>
+                                <Link
+                                    href="https://www.linkedin.com/in/blshaer/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="group relative flex flex-col gap-4 px-1 transition-all duration-300 hover:bg-muted/30 rounded-lg -mx-2 p-2"
+                                >
+                                    {/* Accent Line */}
+                                    <div className="absolute left-[-14px] sm:left-[-20px] top-0 bottom-0 w-[2px] bg-border/40 group-hover:bg-primary/60 transition-colors" />
 
-                        <div className="flex flex-col gap-1">
-                            <h3 className="text-[1rem] font-bold text-foreground">
-                                {rec.name}
-                            </h3>
-                            <p className="text-[0.82rem] text-muted-foreground uppercase tracking-wider font-medium">
-                                {rec.role}<span className="text-muted-foreground/30 mx-1">•</span>{rec.company}
-                            </p>
-                        </div>
+                                    <div className="flex flex-col gap-1">
+                                        <h3 className="text-[1rem] font-bold text-foreground">
+                                            {rec.name}
+                                        </h3>
+                                        <p className="text-[0.82rem] text-muted-foreground uppercase tracking-wider font-medium">
+                                            {rec.role}
+                                            <span className="text-muted-foreground/30 mx-1">•</span>
+                                            {rec.company}
+                                        </p>
+                                    </div>
 
-                        <p className="text-[0.92rem] text-muted-foreground leading-[1.6] italic">
-                            &quot;{rec.text}&quot;
-                        </p>
-                    </div>
-                ))}
-            </div>
+                                    <p className="text-[0.92rem] text-muted-foreground leading-[1.6] italic">
+                                        &quot;{rec.text}&quot;
+                                    </p>
+                                </Link>
+                            </TooltipTrigger>
+                            <TooltipContent side="right">
+                                <p>View In LinkedIn</p>
+                            </TooltipContent>
+                        </Tooltip>
+                    ))}
+                </div>
+            </TooltipProvider>
         </motion.section>
     );
 }

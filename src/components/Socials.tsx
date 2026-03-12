@@ -1,13 +1,13 @@
 "use client";
 
-import React from "react";
-import Link from "next/link";
 import { motion } from "framer-motion";
-import { SectionTitle, ExternalIcon } from "./ProfileHeader";
-import { Mail } from "lucide-react";
+import { Mail, YoutubeIcon } from "lucide-react";
+import Link from "next/link";
+import React from "react";
+import { ExternalIcon, SectionTitle } from "./ProfileHeader";
 
-import { HoverCard, HoverCardContent, HoverCardTrigger } from "./ui/hover-card";
 import Microlink from "@microlink/react";
+import { HoverCard, HoverCardContent, HoverCardTrigger } from "./ui/hover-card";
 
 interface Social {
     platform: string;
@@ -34,6 +34,12 @@ const SOCIALS: Social[] = [
         icon: <XIcon />,
         handle: "@blshaer",
         href: "https://x.com/blshaer/",
+    },
+    {
+        platform: "Youtube",
+        icon: <YoutubeIcon />,
+        handle: "@blshaer",
+        href: "https://www.youtube.com/@blshaer",
     },
     {
         platform: "Email",
