@@ -13,29 +13,35 @@ export default function ProfileHeader() {
             className="flex flex-col gap-10"
         >
             {/* Profile Row */}
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-5">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-5 group">
+
+                {/* Profile Image */}
                 <div className="relative">
-                    {/* Profile Image Placeholder */}
                     <div className="w-[72px] h-[72px] rounded-full bg-muted border border-border overflow-hidden flex items-center justify-center">
                         <img
                             src="https://github.com/blshaer.png"
                             alt="Baraa Alshaer"
-                            className="w-full h-full object-cover transition-all duration-500 grayscale-0 hover:grayscale"
+                            className="w-full h-full object-cover transition-all duration-500 group-hover:grayscale"
                             onError={(e) => {
-                                // Double fallback if needed
-                                (e.target as HTMLImageElement).src = "https://unavatar.io/github/blshaer";
+                                (e.target as HTMLImageElement).src =
+                                    "https://unavatar.io/github/blshaer";
                             }}
                         />
                     </div>
                 </div>
+
+                {/* Text */}
                 <div className="flex flex-col gap-0.5">
-                    <h1 className="text-[1.5rem] sm:text-[1.7rem] font-bold tracking-tight text-foreground flex items-center gap-2">
+                    <h1 className="text-[1.5rem] sm:text-[1.7rem] font-bold tracking-tight text-foreground flex items-center gap-2 group">
                         Hi, I'm Baraa{" "}
-                        <span className="inline-block animate-wave origin-[70%_70%]">
+                        <span className="inline-block group-hover:animate-wave origin-[70%_70%]">
                             👋
                         </span>
                     </h1>
-                    <p className="text-muted-foreground text-[0.88rem] sm:text-[0.95rem]">Full-Stack Engineer</p>
+
+                    <p className="text-muted-foreground text-[0.88rem] sm:text-[0.95rem]">
+                        Full-Stack Engineer
+                    </p>
                 </div>
             </div>
 
@@ -45,19 +51,34 @@ export default function ProfileHeader() {
 
                 <div className="flex flex-col gap-4 text-[0.92rem] sm:text-[0.95rem] text-muted-foreground leading-[1.7]">
                     <p>
-                        I am a Full-Stack Engineer dedicated to crafting high-performance, scalable software solutions. With over 5+ years of professional experience, I specialize in building robust architectures and seamless digital experiences that drive real-world value.
+                        I am a Full-Stack Engineer dedicated to crafting
+                        high-performance, scalable software solutions. With
+                        over 5+ years of professional experience, I specialize
+                        in building robust architectures and seamless digital
+                        experiences that drive real-world value.
                     </p>
 
                     <p>
-                        I thrive at the intersection of clean, maintainable code and human-centric design, turning complex technical challenges into elegant, future-ready systems. Whether it&apos;s architecting a resilient back-end or polishing a pixel-perfect front-end, I build with precision and a relentless focus on quality.
+                        I thrive at the intersection of clean, maintainable code
+                        and human-centric design, turning complex technical
+                        challenges into elegant, future-ready systems. Whether
+                        it's architecting a resilient back-end or polishing a
+                        pixel-perfect front-end, I build with precision and a
+                        relentless focus on quality.
                     </p>
                 </div>
 
                 {/* CTA Box */}
-                <div className="mt-2 bg-gradient-to-br from-muted/50 to-transparent border border-border/60 rounded-2xl p-6 flex flex-col gap-4 shadow-sm">
+                <div className="mt-2 bg-gradient-to-br from-muted/50 to-transparent border border-border rounded-2xl p-6 flex flex-col gap-4 shadow-sm">
                     <p className="text-[0.95rem] text-foreground/90 leading-relaxed">
-                        Need a technical partner to bring your vision to life? Let&apos;s discuss how we can <span className="font-semibold text-foreground underline decoration-primary/20 underline-offset-4">build</span> something exceptional.
+                        Need a technical partner to bring your vision to life?
+                        Let&apos;s discuss how we can{" "}
+                        <span className="font-semibold text-foreground underline decoration-primary/20 underline-offset-4">
+                            build
+                        </span>{" "}
+                        something exceptional.
                     </p>
+
                     <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-3">
                         <Link
                             href="mailto:blshaer@outlook.com"
@@ -65,14 +86,14 @@ export default function ProfileHeader() {
                         >
                             Get in Touch
                         </Link>
+
                         <Link
                             href="https://drive.google.com/file/d/1dGBTO1TRdPL13lF1EvTRT8CRgOfLEo3X/view?usp=sharing"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-1 text-[0.82rem] text-muted-foreground hover:text-foreground transition-colors"
                         >
-                            Resume{" "}
-                            <ExternalIcon />
+                            Resume <ExternalIcon />
                         </Link>
                     </div>
                 </div>
