@@ -3,6 +3,8 @@
 import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import ProfilePic from "@/app/ProfilePic.png";
 
 export default function ProfileHeader() {
     return (
@@ -18,14 +20,13 @@ export default function ProfileHeader() {
                 {/* Profile Image */}
                 <div className="relative">
                     <div className="w-[72px] h-[72px] rounded-full bg-muted border border-border overflow-hidden flex items-center justify-center">
-                        <img
-                            src="https://github.com/blshaer.png"
+                        <Image
+                            src={ProfilePic}
                             alt="Baraa Alshaer"
+                            width={72}
+                            height={72}
                             className="w-full h-full object-cover transition-all duration-500 group-hover:grayscale"
-                            onError={(e) => {
-                                (e.target as HTMLImageElement).src =
-                                    "https://unavatar.io/github/blshaer";
-                            }}
+                            priority
                         />
                     </div>
                 </div>
