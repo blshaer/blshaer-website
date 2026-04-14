@@ -146,7 +146,7 @@ function ProjectCard({ project, defaultOpen = false }: { project: Project; defau
                         {project.name}
                     </h3>
                     {/* Short Description Preview */}
-                    <p className="text-[0.75rem] text-muted-foreground/60 font-medium leading-[1.5] max-w-[240px] sm:max-w-[380px] md:max-w-[450px]">
+                    <p className="text-[0.75rem] text-foreground/55 dark:text-muted-foreground/60 font-medium leading-[1.5] max-w-[240px] sm:max-w-[380px] md:max-w-[450px]">
                         {project.description}
                     </p>
                 </div>
@@ -198,7 +198,7 @@ function ProjectCard({ project, defaultOpen = false }: { project: Project; defau
                                 {project.points.map((point, i) => (
                                     <li key={i} className="flex gap-3">
                                         <span className="mt-2 w-[5px] h-[5px] rounded-full bg-primary/40 shrink-0" />
-                                        <p className="text-[0.88rem] text-muted-foreground leading-[1.6]">
+                                        <p className="text-[0.88rem] text-foreground/70 dark:text-muted-foreground leading-[1.6]">
                                             {point}
                                         </p>
                                     </li>
