@@ -80,28 +80,28 @@
 
 @layer base {
   :root {
-    --background: #fafaf9;
-    --foreground: #1c1917;
-    --muted: #f5f5f4;
-    --muted-foreground: #78716c;
+    --background: #f8f9fb;
+    --foreground: #0f1117;
+    --muted: #eef0f4;
+    --muted-foreground: #52596b;
     --card: #ffffff;
-    --card-foreground: #1c1917;
+    --card-foreground: #0f1117;
     --popover: #ffffff;
-    --popover-foreground: #1c1917;
-    --primary: #292524;
-    --primary-foreground: #fafaf9;
-    --secondary: #e7e5e4;
-    --secondary-foreground: #1c1917;
-    --accent: #f5f5f4;
-    --accent-foreground: #1c1917;
-    --destructive: #ef4444;
-    --destructive-foreground: #fafaf9;
-    --border: #e7e5e4;
-    --input: #e7e5e4;
-    --ring: #292524;
+    --popover-foreground: #0f1117;
+    --primary: #0f1117;
+    --primary-foreground: #f8f9fb;
+    --secondary: #e4e7ed;
+    --secondary-foreground: #0f1117;
+    --accent: #eef0f4;
+    --accent-foreground: #0f1117;
+    --destructive: #dc2626;
+    --destructive-foreground: #ffffff;
+    --border: #d8dce6;
+    --input: #dde0e8;
+    --ring: #0f1117;
     --radius: 1rem;
-    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+    --shadow-sm: 0 1px 3px 0 rgb(15 17 23 / 0.06);
+    --shadow-md: 0 4px 8px -1px rgb(15 17 23 / 0.08), 0 2px 4px -2px rgb(15 17 23 / 0.05);
   }
 
   .dark {
