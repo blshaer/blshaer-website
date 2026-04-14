@@ -1,10 +1,10 @@
 import React from "react";
-import ProfileHeader from "@/components/ProfileHeader";
-import Projects from "@/components/Projects";
-import WorkedAs from "@/components/WorkedAs";
-import Socials from "@/components/Socials";
-import Recommendations from "@/components/Recommendations";
-import Footer from "@/components/Footer";
+import ProfileHeader from "@/components/layout/profile-header";
+import Projects from "@/components/sections/projects";
+import WorkedAs from "@/components/sections/worked-as";
+import Socials from "@/components/sections/socials";
+import Recommendations from "@/components/sections/recommendations";
+import Footer from "@/components/layout/footer";
 
 export default function Page() {
   return (

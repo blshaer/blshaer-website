@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/tooltip"; // Adjust path based on your setup
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { SectionTitle } from "./ProfileHeader";
+import { SectionTitle } from "@/components/layout/profile-header";
 
 interface Recommendation {
     name: string;

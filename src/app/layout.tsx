@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   manifest: "/manifest.json",
 };
 
-import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeProvider } from "@/components/providers/theme-provider";
 
 export default function RootLayout({
   children,

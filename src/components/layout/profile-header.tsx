@@ -52,8 +52,7 @@ export default function ProfileHeader() {
                 <div className="flex flex-col gap-4 text-[0.92rem] sm:text-[0.95rem] text-muted-foreground leading-[1.7]">
                     <p>
                         I am a Full-Stack Engineer dedicated to crafting
-                        high-performance, scalable software solutions. With
-                        over 5+ years of professional experience, I specialize
+                        high-performance, scalable software solutions. I specialize
                         in building robust architectures and seamless digital
                         experiences that drive real-world value.
                     </p>
@@ -85,15 +84,6 @@ export default function ProfileHeader() {
                             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground text-[0.82rem] font-medium px-4 py-2 rounded-lg hover:opacity-90 transition-opacity"
                         >
                             Get in Touch
-                        </Link>
-
-                        <Link
-                            href="https://drive.google.com/file/d/1dGBTO1TRdPL13lF1EvTRT8CRgOfLEo3X/view?usp=sharing"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1 text-[0.82rem] text-muted-foreground hover:text-foreground transition-colors"
-                        >
-                            Resume <ExternalIcon />
                         </Link>
                     </div>
                 </div>
