@@ -52,7 +52,7 @@ export default function ProfileHeader() {
 
                 <div className="flex flex-col gap-4 text-[0.92rem] sm:text-[0.95rem] text-muted-foreground leading-[1.7]">
                     <p>
-                        I build from zero. I am a Full-Stack Engineer and Software Architect dedicated to 
+                        I build from zero. I am a Full-Stack Engineer dedicated to 
                         crafting high-performance, scalable software solutions. Whether it&apos;s frontend, 
                         backend, full-stack applications, or AI-powered experiences, I work across the 
                         entire development lifecycle.
