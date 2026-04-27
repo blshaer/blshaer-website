@@ -6,10 +6,16 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronUp, ChevronDown, MapPin } from "lucide-react";
 import { SectionTitle, ExternalIcon } from "@/components/layout/profile-header";
 
+import Image from "next/image";
+import USFlag from "@flags/us.svg";
+import SAFlag from "@flags/sa.svg";
+import PSFlag from "@flags/ps.svg";
+
 interface WorkExperience {
     title: string;
     company: string;
     location: string;
+    countryCode?: "US" | "SA" | "PS";
     website: string;
     websiteLabel: string;
     period: string;
@@ -18,11 +24,18 @@ interface WorkExperience {
     type: string;
 }
 
+const FLAGS = {
+    US: USFlag,
+    SA: SAFlag,
+    PS: PSFlag,
+};
+
 const EXPERIENCES: WorkExperience[] = [
     {
         title: "Full Stack Developer",
         company: "SamTax",
         location: "Philadelphia, USA (Remote)",
+        countryCode: "US",
         website: "https://sam-tax.com/",
         websiteLabel: "sam-tax.com",
         period: "Sep 2025 – Mar 2026",
@@ -43,6 +56,7 @@ const EXPERIENCES: WorkExperience[] = [
         title: "Frontend Developer",
         company: "Sustainable Star LLC",
         location: "Riyadh, Saudi Arabia (Remote)",
+        countryCode: "SA",
         website: "http://sustainablestar.com.sa/",
         websiteLabel: "Sustainable Star",
         period: "Jun 2023 – Oct 2023",
@@ -62,6 +76,7 @@ const EXPERIENCES: WorkExperience[] = [
         title: "Frontend Developer",
         company: "Perfect Touch (PTIT)",
         location: "Riyadh, Saudi Arabia (Remote)",
+        countryCode: "SA",
         website: "http://ptit.com.sa/",
         websiteLabel: "ptit.com.sa",
         period: "Jun 2023 – Sep 2023",
@@ -81,6 +96,7 @@ const EXPERIENCES: WorkExperience[] = [
         title: "Software Engineer Intern",
         company: "GEDCO",
         location: "Rafah, Palestine",
+        countryCode: "PS",
         website: "http://gedco.ps/",
         websiteLabel: "gedco.ps",
         period: "Apr 2022 – Jun 2022",
@@ -155,8 +171,18 @@ function WorkCard({ experience, defaultOpen = false }: { experience: WorkExperie
                         )}
                     </div>
                     {/* Location Preview */}
-                    <p className="text-[0.72rem] text-muted-foreground/60 font-medium truncate max-w-[250px] sm:max-w-none flex items-center gap-1">
-                        <MapPin size={10} className="shrink-0" />
+                    <p className="text-[0.72rem] text-muted-foreground/60 font-medium truncate max-w-[250px] sm:max-w-none flex items-center gap-1.5">
+                        {experience.countryCode && FLAGS[experience.countryCode] ? (
+                            <Image
+                                src={FLAGS[experience.countryCode]}
+                                alt={`${experience.countryCode} flag`}
+                                width={14}
+                                height={14}
+                                className="rounded-sm object-cover"
+                            />
+                        ) : (
+                            <MapPin size={10} className="shrink-0" />
+                        )}
                         {experience.location}
                     </p>
                 </div>

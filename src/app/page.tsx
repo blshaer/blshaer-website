@@ -18,8 +18,8 @@ export default function Page() {
 
       <div className="container relative z-10 flex flex-col gap-8 md:gap-14 pt-20 md:pt-16 lg:pt-14 pb-0">
         <ProfileHeader />
-        <Projects />
         <WorkedAs />
+        <Projects />
         <Recommendations />
         <Socials />
         <Footer />
