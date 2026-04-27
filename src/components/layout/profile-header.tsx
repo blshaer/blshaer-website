@@ -52,19 +52,17 @@ export default function ProfileHeader() {
 
                 <div className="flex flex-col gap-4 text-[0.92rem] sm:text-[0.95rem] text-muted-foreground leading-[1.7]">
                     <p>
-                        I am a Full-Stack Engineer dedicated to crafting
-                        high-performance, scalable software solutions. I specialize
-                        in building robust architectures and seamless digital
-                        experiences that drive real-world value.
+                        I build from zero. I am a Full-Stack Engineer and Software Architect dedicated to 
+                        crafting high-performance, scalable software solutions. Whether it&apos;s frontend, 
+                        backend, full-stack applications, or AI-powered experiences, I work across the 
+                        entire development lifecycle.
                     </p>
 
                     <p>
-                        I thrive at the intersection of clean, maintainable code
-                        and human-centric design, turning complex technical
-                        challenges into elegant, future-ready systems. Whether
-                        it's architecting a resilient back-end or polishing a
-                        pixel-perfect front-end, I build with precision and a
-                        relentless focus on quality.
+                        From architecture to deployment to user feedback, I care less about technology 
+                        debates and more about delivering results that people love using. I focus on 
+                        clean, maintainable code and building with precision and a relentless focus 
+                        on quality.
                     </p>
                 </div>
 
