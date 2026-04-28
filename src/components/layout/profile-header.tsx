@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import ProfilePic from "@/app/ProfilePic.png";
+import { FileDown } from "lucide-react";
 
 export default function ProfileHeader() {
     return (
@@ -41,8 +42,7 @@ export default function ProfileHeader() {
                     </h1>
 
                     <p className="text-muted-foreground text-[0.88rem] sm:text-[0.95rem]">
-                        Full-Stack Engineer
-                    </p>
+                        Full Stack Developer Building Scalable Products from Zero to Launch                    </p>
                 </div>
             </div>
 
@@ -52,16 +52,16 @@ export default function ProfileHeader() {
 
                 <div className="flex flex-col gap-4 text-[0.92rem] sm:text-[0.95rem] text-muted-foreground leading-[1.7]">
                     <p>
-                        I build from zero. I am a Full-Stack Engineer dedicated to 
-                        crafting high-performance, scalable software solutions. Whether it&apos;s frontend, 
-                        backend, full-stack applications, or AI-powered experiences, I work across the 
+                        I am a Full-Stack Engineer dedicated to
+                        crafting high-performance, scalable software solutions. Whether it&apos;s frontend,
+                        backend, full-stack applications, or AI-powered experiences, I work across the
                         entire development lifecycle.
                     </p>
 
                     <p>
-                        From architecture to deployment to user feedback, I care less about technology 
-                        debates and more about delivering results that people love using. I focus on 
-                        clean, maintainable code and building with precision and a relentless focus 
+                        From architecture to deployment to user feedback, I care less about technology
+                        debates and more about delivering results that people love using. I focus on
+                        clean, maintainable code and building with precision and a relentless focus
                         on quality.
                     </p>
                 </div>
@@ -83,6 +83,15 @@ export default function ProfileHeader() {
                             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground text-[0.82rem] font-medium px-4 py-2 rounded-lg hover:opacity-90 transition-opacity"
                         >
                             Get in Touch
+                        </Link>
+                        <Link
+                            href="/Baraa_Alshaer.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-muted/50 text-foreground text-[0.82rem] font-medium px-4 py-2 rounded-lg hover:bg-muted transition-all border border-border"
+                        >
+                            <FileDown size={14} className="text-muted-foreground" />
+                            Download Resume
                         </Link>
                     </div>
                 </div>
