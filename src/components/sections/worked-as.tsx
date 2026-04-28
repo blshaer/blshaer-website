@@ -176,9 +176,9 @@ function WorkCard({ experience, defaultOpen = false }: { experience: WorkExperie
                             <Image
                                 src={FLAGS[experience.countryCode]}
                                 alt={`${experience.countryCode} flag`}
-                                width={14}
-                                height={14}
-                                className="rounded-sm object-cover"
+                                width={18}
+                                height={12}
+                                className="object-cover"
                             />
                         ) : (
                             <MapPin size={10} className="shrink-0" />

@@ -35,14 +35,11 @@ export default function ProfileHeader() {
                 {/* Text */}
                 <div className="flex flex-col gap-0.5">
                     <h1 className="text-[1.5rem] sm:text-[1.7rem] font-bold tracking-tight text-foreground flex items-center gap-2 group">
-                        Hi, I'm Baraa{" "}
-                        <span className="inline-block group-hover:animate-wave origin-[70%_70%]">
-                            👋
-                        </span>
+                        Hi, I'm Baraa
                     </h1>
 
                     <p className="text-muted-foreground text-[0.88rem] sm:text-[0.95rem]">
-                        Full Stack Developer Building Scalable Products from Zero to Launch                    </p>
+                        Full Stack Engineer               </p>
                 </div>
             </div>
 
@@ -52,18 +49,11 @@ export default function ProfileHeader() {
 
                 <div className="flex flex-col gap-4 text-[0.92rem] sm:text-[0.95rem] text-muted-foreground leading-[1.7]">
                     <p>
-                        I am a Full-Stack Engineer dedicated to
-                        crafting high-performance, scalable software solutions. Whether it&apos;s frontend,
-                        backend, full-stack applications, or AI-powered experiences, I work across the
-                        entire development lifecycle.
+                        I’m a Full Stack Engineer specialized in building scalable SaaS platforms, modern digital products, and AI-powered solutions <span className="text-foreground/80 ">from zero to launch</span>. <br /><br />
+                        With hands-on experience across frontend, backend, and product architecture, I create software focused on performance, clean user experience, and long-term maintainability. <br /><br />
+                        My approach is simple: build fast, build clean, and build products that solve real problems.
                     </p>
 
-                    <p>
-                        From architecture to deployment to user feedback, I care less about technology
-                        debates and more about delivering results that people love using. I focus on
-                        clean, maintainable code and building with precision and a relentless focus
-                        on quality.
-                    </p>
                 </div>
 
                 {/* CTA Box */}

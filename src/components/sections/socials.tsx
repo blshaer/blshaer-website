@@ -11,6 +11,7 @@ interface Social {
     icon: React.ReactNode;
     handle: string;
     href: string;
+    color: string;
 }
 
 const SOCIALS: Social[] = [
@@ -19,30 +20,35 @@ const SOCIALS: Social[] = [
         icon: <LinkedInIcon />,
         handle: "@blshaer",
         href: "https://www.linkedin.com/in/blshaer/",
+        color: "group-hover:text-[#0077B5]",
     },
     {
         platform: "GitHub",
         icon: <GitHubIcon />,
         handle: "@blshaer",
         href: "https://github.com/blshaer/",
+        color: "group-hover:text-foreground",
     },
     {
         platform: "X",
         icon: <XIcon />,
         handle: "@blshaer",
         href: "https://x.com/blshaer/",
+        color: "group-hover:text-foreground",
     },
     {
         platform: "Youtube",
         icon: <YoutubeFilledIcon />,
         handle: "@blshaer",
         href: "https://www.youtube.com/@blshaer",
+        color: "group-hover:text-[#FF0000]",
     },
     {
         platform: "Email",
         icon: <MailFilledIcon />,
         handle: "blshaer@outlook.com",
         href: "mailto:blshaer@outlook.com",
+        color: "group-hover:text-[#0078D4]",
     },
 ];
 
@@ -67,7 +73,7 @@ export default function Socials() {
                             rel="noopener noreferrer"
                             className="flex items-center gap-1 px-3 py-2 -mx-3 rounded-xl group w-fit hover:bg-muted/40 transition-all border border-transparent hover:border-border/50 cursor-pointer"
                         >
-                            <span className="text-muted-foreground/60 group-hover:text-foreground transition-colors w-5 flex justify-center">
+                            <span className={`text-muted-foreground/60 transition-colors w-5 flex justify-center ${social.color}`}>
                                 {social.icon}
                             </span>
                             <span className="text-[0.88rem] text-muted-foreground group-hover:text-foreground transition-colors">
